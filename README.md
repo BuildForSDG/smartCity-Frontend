@@ -1,12 +1,11 @@
-barebones setup for JavaScript / Node projects replace this with a one-liner phrase describing this project or app
+## BuildForSDG/team-241 SmartCity (Frontend)
 
-[![Codacy Badge](https://img.shields.io/badge/Code%20Quality-D-red)](https://img.shields.io/badge/Code%20Quality-D-red)
+[![Codacy Badge](https://img.shields.io/badge/Code%20Quality-A-green)](https://img.shields.io/badge/Code%20Quality-A-green)
 
 
-## About
+## About SmartCity
 
-What is this project about. Ok to enrich here or the section above it with an image. 
-
+SmartCity is a project that seeks to digitize buying and hiring process in a mordern society. **Shalom will add more details from here.**
 Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
 
 This is a simple JavaScript starter repo template for setting up your project. The setup contains
