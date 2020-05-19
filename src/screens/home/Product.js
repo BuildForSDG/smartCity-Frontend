@@ -11,7 +11,7 @@ export const Product = ({ product }) => {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <Button variant=" outlined primary">${price}</Button>
+        <Button variant=" outline-primary">${price}</Button>
       </Card.Body>
     </Card>
   );
