@@ -1,23 +1,28 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-export const Artisan = ({ artisan }) => {
+export const Artisan = ({ product }) => {
 
-    // const { banner_pic, name, service, detail_desc, contact } = artisan;
+    // const { banner_pic, name, service, detail_desc, contact } = product;
+    const { description, name, price, thumbnail } = product;
     return (
         <Card className="Artisan__card">
-          <Card.Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYTsTAooieGT9PY7CibhWIg9SOLh-QmQm_1aO-xW-zrYIm3C0s&usqp=CAU" alt="Card image" />
+          <Card.Img src={`https://backendapi.turing.com/images/products/${thumbnail}`} alt={name} />
           <Card.ImgOverlay className="Artisan__Overlay">
              <Card.Text>
-               I'm the best web designer in the subsaharan Africa
+               {description}
              </Card.Text>
-             <Button>Contact Me</Button>
+             <Button>Contact Me {name}</Button>
           </Card.ImgOverlay>
           <Card.Body>
-            <Card.Title> SERVICES </Card.Title>
-            <Card.Subtitle> NAME <b>$45/hr</b></Card.Subtitle>
+            <Card.Title> {name} </Card.Title>
+            <Card.Subtitle> NAME <b>{price}</b></Card.Subtitle>
           </Card.Body>
         </Card>
     )
 }
 
+Artisan.propTypes = {
+  product: PropTypes.object.isRequired
+};
