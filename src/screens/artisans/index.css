@@ -1,0 +1,33 @@
+.Artisan__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Artisan__card {
+    color: rgb(59, 57, 57);
+    max-width: 25rem;
+    margin: 0.5rem;
+}
+
+.Artisan__card .Artisan__Overlay {
+    display: none;
+}
+
+.Artisan__card:hover .Artisan__Overlay {
+    display: block;
+}
+.Artisan__Overlay{
+    background: linear-gradient(rgb(44, 43, 44), #1f1f1e);
+    background: rgba(44, 43, 44, 0.787);
+    color: gold;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.Artisan__Overlay Button {
+    text-align: center;
+    color: #000;
+    position: absolute;
+    bottom: 2px;
+    left: 30%;
+}
