@@ -58,7 +58,7 @@ class artisansService extends EventEmitter {
         return new Promise((resolve, reject) => {
             axios
               .get(systemConfig.serverBaseUrl + `artisans/inCategory/${category_id}`)
-              .then((reponse) => {
+              .then((response) => {
                   resolve(response.data);
               })
               .catch((error) => {
@@ -109,7 +109,7 @@ class artisansService extends EventEmitter {
                 reject(error.response)
             });
         });
-    };
+    }
 
     getAnArtisanReviews({ artisan_id })  {
         return new Promise((resolve, reject) => {
@@ -122,7 +122,7 @@ class artisansService extends EventEmitter {
                 reject(error.response)
             });
         });
-    };
+    }
 
     createAnArtisanReview({ artisan_id , review, rating }) {
         return new Promise((resolve, reject) => {
@@ -132,7 +132,7 @@ class artisansService extends EventEmitter {
                   rating
               })
               .then((response) => {
-                  resolve(reponse.data.user);
+                  resolve(response.data.user);
               })
               .catch((error) => {
                   reject(error.response);

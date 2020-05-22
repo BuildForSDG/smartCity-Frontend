@@ -26,3 +26,4 @@ export const Artisan = ({ product }) => {
 Artisan.propTypes = {
   product: PropTypes.object.isRequired
 };
+
