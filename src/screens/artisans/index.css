@@ -1,13 +1,15 @@
 .Artisan__container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    margin: 5% auto;
+    width: 100%;
 }
 .Artisan__card {
     color: rgb(59, 57, 57);
-    max-width: 25rem;
-    margin: 0.5rem;
+    width: 32%;
+    margin: 1% auto;
 }
+.Artisan__card img{max-height: 10rem;}
 
 .Artisan__card .Artisan__Overlay {
     display: none;
@@ -22,12 +24,15 @@
     color: gold;
     text-align: justify;
     overflow: hidden;
+    padding: auto;
 }
 
 .Artisan__Overlay Button {
     text-align: center;
     color: #000;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
     bottom: 2px;
-    left: 30%;
+    /* left: auto; */
 }

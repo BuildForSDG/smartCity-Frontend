@@ -17,7 +17,7 @@ const Artisans = ({ getAllProducts, products }) => {
   const items = products.all.data.rows;
 
   return (
-    <div className="Artisan__container">
+    <div className="container Artisan__container">
          {items.map((item) => (
              <Artisan key={item.product_id} product={item} />
          ))}
