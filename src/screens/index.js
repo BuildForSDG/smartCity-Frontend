@@ -1,6 +1,6 @@
 import Home from './home';
-import { FreshMart } from './freshmart';
+import FreshMart from './freshmart';
 import Artisans from './artisans';
-import { Professionals } from './professionals';
+import  Professionals  from './professionals';
 
 export { Home, Artisans, FreshMart, Professionals };
