@@ -4,6 +4,6 @@ export const GET_AN_ARTISAN_SUCCESS = "GET_AN_ARTISAN_SUCCESS";
 
 
 export const getAnArtisan = (data) => ({
-    types: GET_AN_ARTISAN,
+    type: GET_AN_ARTISAN,
     payload: data
 });
