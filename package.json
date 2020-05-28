@@ -57,7 +57,8 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "jest": "^25.4.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "redux-mock-store": "^1.5.4"
   },
   "browserslist": [
     "last 1 Chrome versions"
