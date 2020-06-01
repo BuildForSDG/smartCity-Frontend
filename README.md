@@ -1,7 +1,6 @@
 ## BuildForSDG/team-241 SmartCity (Frontend)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/13b087a11c924da1bed71c536993fe0b)](https://app.codacy.com/gh/BuildForSDG/smartCity-Frontend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/smartCity-Frontend&utm_campaign=Badge_Grade_Dashboard)
-[![Codacy Badge](https://img.shields.io/badge/Code%20Quality-A-green)](https://img.shields.io/badge/Code%20Quality-A-green)
 
 ## About SmartCity
 
