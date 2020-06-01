@@ -1,6 +1,6 @@
 ## BuildForSDG/team-241 SmartCity (Frontend)
 
-
+[![Codacy Badge](https://img.shields.io/badge/Code%20Quality-A-green)](https://img.shields.io/badge/Code%20Quality-A-green)
 
 ## About SmartCity
 
