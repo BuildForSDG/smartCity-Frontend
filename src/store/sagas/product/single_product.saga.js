@@ -7,7 +7,7 @@ import {
 }
     from "../../actions/product";
 
-function* singleProductSaga(action) {
+export function* singleProductSaga(action) {
     try {
         const data = yield call(productsService.getProductById, action.payload);
         yield put({

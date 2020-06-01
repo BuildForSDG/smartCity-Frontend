@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getAllProducts } from '../../store/actions';
 import { Profession } from './Profession';
+import { ContainerDiv, ItemsWrapper } from '../styles';
 
 
 const Professionals =  ({ getAllProducts, products }) => {
@@ -18,11 +19,13 @@ const Professionals =  ({ getAllProducts, products }) => {
     const items = products.all.data.rows;
 
     return (
-        <div className="container Artisan__container">
-            {items.map((item) => (
-                <Profession key={item.product_id} product={item} />
-            ))}
-        </div>
+        <ContainerDiv>
+            <ItemsWrapper className="Artisan__container">
+                {items.map((item) => (
+                    <Profession key={item.product_id} product={item} />
+                ))}
+            </ItemsWrapper>
+        </ContainerDiv>
     )
 }
 

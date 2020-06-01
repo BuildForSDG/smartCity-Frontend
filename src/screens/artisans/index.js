@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Artisan } from './Artisan';
 import { getAllProducts } from '../../store/actions';
-import './index.css'
+import styled from 'styled-components';
+import { ContainerDiv, ItemsWrapper } from '../styles';
+
 const Artisans = ({ getAllProducts, products }) => {
   useEffect(() => {
     getAllProducts({
@@ -17,11 +19,13 @@ const Artisans = ({ getAllProducts, products }) => {
   const items = products.all.data.rows;
 
   return (
-    <div className="container Artisan__container">
-         {items.map((item) => (
-             <Artisan key={item.product_id} product={item} />
-         ))}
-        </div>
+    <ContainerDiv>
+      <ItemsWrapper>
+          {items.map((item) => (
+              <Artisan key={item.product_id} product={item} />
+          ))}
+      </ItemsWrapper>
+    </ContainerDiv>
   );
 };
 
@@ -39,3 +43,4 @@ const mapDispatchToProp = {
   getAllProducts
 };
 export default connect(mapStateToProps, mapDispatchToProp)(Artisans);
+

@@ -1,10 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Navbar, Nav, NavDropdown,Form, Button, FormControl, NavItem} from 'react-bootstrap'
+import {Navbar, Nav, NavDropdown,Form, FormControl, NavItem} from 'react-bootstrap'
+import styled from 'styled-components';
 
 
 export const AppBar = () => 
-<Navbar bg="primary" variant="dark" expand="lg">
+<Navbar style={{backgroundColor: 'rgba(4, 9, 110, 0.95)', paddingLeft: '5%', paddingRight: '5%' }} bg="pimary" variant="dark" expand="lg">
 <Navbar.Brand><Link to='/' style={styles.item}>SMARTCITY</Link></Navbar.Brand>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 <Navbar.Collapse id="basic-navbar-nav">
@@ -23,7 +24,7 @@ export const AppBar = () =>
   </Nav>
   <Form inline style={styles.root}>
     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-    <Button variant="outline-success">Search</Button>
+    <ActionButton>Search</ActionButton>
   </Form>
 </Navbar.Collapse>
 </Navbar>
@@ -42,3 +43,14 @@ const styles = {
   opacity:0.8
   }
 }
+
+const ActionButton = styled.button`
+  background-color: #FFAF30;
+  border: none;
+  color: rgba(4, 9, 110, 0.95);
+  padding: 8px 12px;
+  border-radius: 5px;
+  // :hover {
+  //   color: rgba(4, 9, 110, 0.95);
+  // }
+`;
