@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Product } from './Product';
 import { getAllProducts } from '../../store/actions';
+import { ContainerDiv, ItemsWrapper } from '../styles'
+
 const Home = ({ getAllProducts, products }) => {
   useEffect(() => {
     getAllProducts({
@@ -16,20 +18,16 @@ const Home = ({ getAllProducts, products }) => {
   const items = products.all.data.rows;
 
   return (
-    <div style={styles}>
-      {items.map((item) => (
-        <Product key={item.product_id} product={item} />
-      ))}
-    </div>
+    <ContainerDiv>
+      <ItemsWrapper>
+        {items.map((item) => (
+          <Product key={item.product_id} product={item} />
+        ))}
+      </ItemsWrapper>
+    </ContainerDiv>
   );
 };
-const styles = {
-  padding: '10vw',
-  margin: 'auto',
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap'
-};
+
 
 Home.propTypes = {
   getAllProducts: PropTypes.func,
