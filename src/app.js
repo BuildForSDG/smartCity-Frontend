@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AppBar } from './components/AppBar';
-import { Home, Artisans, FreshMart, Professionals } from './screens';
+import { Home, Artisans, FreshMart, Footer, Professionals } from './screens';
 
 const App = () => (
   <>
@@ -20,6 +20,7 @@ const App = () => (
         <Home />
       </Route>
     </Switch>
+    <Footer />
   </>
 );
 export default App;
