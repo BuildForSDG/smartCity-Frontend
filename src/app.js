@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { AppBar } from './components/AppBar';
 import { 
   Home, Artisans, FreshMart, 
-  Footer, Professionals, ContactForm,
+  Footer, Professionals, ContactForm
 } from './screens';
 
 const App = () => (
