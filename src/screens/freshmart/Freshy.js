@@ -7,9 +7,9 @@ export const Freshy = ({ product }) => {
     const { description, name, price, thumbnail } = product;
     return (
         <PlainCard>
-          <Card.Img variant="top" src={`https://backendapi.turing.com/images/products/${thumbnail}`} alt={name} />
+          <Card.Img style={{ maxHeight: '9rem' }} variant="top" src={`https://backendapi.turing.com/images/products/${thumbnail}`} alt={name} />
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
+            <Card.Text><b>{name}</b></Card.Text>
             <Card.Text>{description}</Card.Text>
             <Button variant="outlined primary">${price}</Button>
             <ButtonPry>Add to Cart</ButtonPry>

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Freshy } from './Freshy';
 import { getAllProducts } from '../../store/actions';
-import { ContainerDiv, ItemsWrapper} from '../styles'
+import { PageDisplay, ContainerDiv, ItemsWrapper, LightHeading} from '../styles'
+import SideBar from '../../components/sidebar';
 
 export const FreshMart =  ({ getAllProducts, products }) => {
     useEffect(() => {
@@ -18,13 +19,19 @@ export const FreshMart =  ({ getAllProducts, products }) => {
     const items = products.all.data.rows;
 
     return (
+        <PageDisplay>
+        <SideBar />
         <ContainerDiv>
+           <LightHeading>
+             <h2>Stores & Groceries</h2>
+           </LightHeading>
           <ItemsWrapper>
             {items.map((item) => (
                 <Freshy key={item.product_id} product={item} />
             ))}
           </ItemsWrapper>
         </ContainerDiv>
+        </PageDisplay>
     )
 
 };

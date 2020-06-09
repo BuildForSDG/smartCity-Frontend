@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Artisan } from './Artisan';
 import { getAllProducts } from '../../store/actions';
-import styled from 'styled-components';
-import { ContainerDiv, ItemsWrapper } from '../styles';
+import SideBar from '../../components/sidebar';
+import { 
+  PageDisplay, ContainerDiv, 
+  ItemsWrapper, DarkHeadings } from '../styles';
 
 const Artisans = ({ getAllProducts, products }) => {
   useEffect(() => {
@@ -19,13 +21,19 @@ const Artisans = ({ getAllProducts, products }) => {
   const items = products.all.data.rows;
 
   return (
+    <PageDisplay>
+    <SideBar />
     <ContainerDiv>
+    <DarkHeadings>
+    <h1>Artisans / Professionals</h1>
+    </DarkHeadings>
       <ItemsWrapper>
           {items.map((item) => (
               <Artisan key={item.product_id} product={item} />
           ))}
       </ItemsWrapper>
     </ContainerDiv>
+    </PageDisplay>
   );
 };
 

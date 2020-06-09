@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Product } from './Product';
 import { getAllProducts } from '../../store/actions';
-import { PageDisplay, ContainerDiv, ItemsWrapper } from '../styles';
+import { PageDisplay, ContainerDiv, ItemsWrapper, LightHeading } from '../styles';
 import SideBar from '../../components/sidebar';
 
 const Home = ({ getAllProducts, products }) => {
@@ -22,6 +22,9 @@ const Home = ({ getAllProducts, products }) => {
     <PageDisplay>
     <SideBar />
     <ContainerDiv>
+    <LightHeading className="py-2">
+      <h2>Fresh Foods</h2>
+    </LightHeading>
       <ItemsWrapper>
         {items.map((item) => (
           <Product key={item.product_id} product={item} />
