@@ -1,10 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Navbar, Nav, NavDropdown,Form, Button, FormControl, NavItem} from 'react-bootstrap'
+import {Navbar, Nav, NavDropdown,Form, FormControl, NavItem} from 'react-bootstrap'
+import styled from 'styled-components';
 
 
 export const AppBar = () => 
-<Navbar bg="primary" variant="dark" expand="lg">
+<Navbar style={{backgroundColor: 'rgba(4, 9, 110, 0.95)', paddingLeft: '5%', paddingRight: '5%' }} bg="pimary" variant="dark" expand="lg">
 <Navbar.Brand><Link to='/' style={styles.item}>SMARTCITY</Link></Navbar.Brand>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 <Navbar.Collapse id="basic-navbar-nav">
@@ -13,6 +14,7 @@ export const AppBar = () =>
     <NavItem style={styles.root}><Link to='/freshmart' style={styles.item}>Freshmart</Link></NavItem>
     <NavItem style={styles.root}><Link to='/artisans' style={styles.item}>Artisans</Link></NavItem>
     <NavItem style={styles.root}><Link to='/professionals' style={styles.item}>Professionals</Link></NavItem>
+    <NavItem style={styles.root}><Link to='/contact' style={styles.item}>Contact Us</Link></NavItem>
     <NavDropdown title="Other Services" id="basic-nav-dropdown" style={styles.root}>
       <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
       <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -23,7 +25,7 @@ export const AppBar = () =>
   </Nav>
   <Form inline style={styles.root}>
     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-    <Button variant="outline-success">Search</Button>
+    <ActionButton>Search</ActionButton>
   </Form>
 </Navbar.Collapse>
 </Navbar>
@@ -42,3 +44,14 @@ const styles = {
   opacity:0.8
   }
 }
+
+const ActionButton = styled.button`
+  background-color: #FFAF30;
+  border: none;
+  color: rgba(4, 9, 110, 0.95);
+  padding: 8px 12px;
+  border-radius: 5px;
+  // :hover {
+  //   color: rgba(4, 9, 110, 0.95);
+  // }
+`;
