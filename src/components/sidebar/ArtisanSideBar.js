@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ArtisanSideBar = () => (
-    <>
+    <div className="mt-3">
       <h5>Artisans</h5>
-      <ArtisansCollection>
+      <ArtisansCollection className="">
          <LinkStyles to="#"> Beauty & Makeup Artistry </LinkStyles>
          <LinkStyles to="#"> Electrical Works </LinkStyles>
          <LinkStyles to="#">Hair styling (male and female)</LinkStyles>
@@ -18,7 +18,7 @@ const ArtisanSideBar = () => (
          <LinkStyles to="#">Creative designs (graphic designs and animations )</LinkStyles>
          <LinkStyles to="#">Web & mobile developers</LinkStyles>
       </ArtisansCollection>
-    </>
+    </div>
 );
 
 export default ArtisanSideBar;
