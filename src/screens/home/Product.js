@@ -5,18 +5,23 @@ import styled  from 'styled-components';
 
 export const Product = ({ product }) => {
   const { description, name, price, thumbnail } = product;
+  console.log(product)
 
   return (
     <PlainCard>
-        <Card.Img style={{ maxHeight: '9rem' }} variant="top" src={`https://backendapi.turing.com/images/products/${thumbnail}`} />
-        <Card.Body>
+      <Card.Img
+        style={{ width: '15rem' }}
+        variant="top"
+        src={`${process.env.IMAGE_URL}/${thumbnail}`}
+      />
+      <Card.Body>
         <BoldText>
-        <Card.Text>{name}</Card.Text>
+          <Card.Text>{name}</Card.Text>
         </BoldText>
-          <CardText>{description}</CardText>
-          <Button variant=" outlined primary">${price}</Button>
-          <ButtonPry>Add to Cart</ButtonPry>
-        </Card.Body>
+        <CardText>{description}</CardText>
+        <Button variant=" outlined primary">${price}</Button>
+        <ButtonPry>Add to Cart</ButtonPry>
+      </Card.Body>
     </PlainCard>
   );
 };
@@ -30,7 +35,7 @@ const BoldText = styled.b`
 `;
 
 const CardText = styled(Card.Text)`
-  @media(max-width: 20px) {
+  @media (max-width: 20px) {
     display: none !important;
   }
 `;
