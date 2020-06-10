@@ -1,7 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AppBar } from './components/AppBar';
-import { Home, Artisans, FreshMart, Footer, Professionals } from './screens';
+import { 
+  Home, Artisans, FreshMart, 
+  Footer, Professionals, ContactForm,
+} from './screens';
 
 const App = () => (
   <>
@@ -15,6 +18,9 @@ const App = () => (
       </Route>
       <Route path="/professionals">
         <Professionals />
+      </Route>
+      <Route path="/contact">
+        <ContactForm />
       </Route>
       <Route path="/">
         <Home />
