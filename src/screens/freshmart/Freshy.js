@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import config  from '../../config/system'
 
 export const Freshy = ({ product }) => {
-    const { description, name, price, thumbnail } = product;
+    const { description, name, price, filename } = product;
     return (
         <PlainCard>
-          <Card.Img style={{ maxHeight: '9rem' }} variant="top" src={`https://backendapi.turing.com/images/products/${thumbnail}`} alt={name} />
+          <Card.Img style={{ maxHeight: '9rem' }} variant="top" src={`${config.imageBaseUrl}/${filename}`} alt={name} />
           <Card.Body>
             <Card.Text><b>{name}</b></Card.Text>
             <Card.Text>{description}</Card.Text>

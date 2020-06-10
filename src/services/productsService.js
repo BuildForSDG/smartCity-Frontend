@@ -14,7 +14,7 @@ class productsService extends EventEmitter {
     axios.defaults.headers.common['Accept'] = 'application/json';
   }
 
-  getAllProducts({ page, limit, description_length }) {
+  getAllProducts({ page, limit, description_length}) {
     return new Promise((resolve, reject) => {
       axios
         .get(systemConfig.serverBaseUrl + '/products', {
@@ -32,6 +32,18 @@ class productsService extends EventEmitter {
         });
     });
   }
+   /*async getAllProducts({ page, limit, description_length }){
+      const products = await axios
+        .get(systemConfig.serverBaseUrl + '/products', {
+          params: {
+            page,
+            limit,
+            description_length
+          }
+        })
+        console.log('prf', products.data)
+        return products.data
+  }*/
 
   searchProducts({ query_string, all_words, page, limit, description_length }) {
     return new Promise((resolve, reject) => {

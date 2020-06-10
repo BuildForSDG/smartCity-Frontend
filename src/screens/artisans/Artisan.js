@@ -2,16 +2,17 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import config  from '../../config/system'
 
 export const Artisan = ({ product }) => {
 
     // const { banner_pic, name, service, detail_desc, contact } = product;
-    const { description, name, price, thumbnail } = product;
+    const { description, name, price, filename } = product;
     const first_name = name.split(" ")[0]
     return (
       <PlainCard>
         <Card className="Artisan__card">
-          <Card.Img src={`https://backendapi.turing.com/images/products/${thumbnail}`} alt={name} />
+          <Card.Img src={`${config.imageBaseUrl}/${filename}`} alt={name} />
           <Card.Body>
             <Card.Title> {name} </Card.Title>
             <Card.Text>

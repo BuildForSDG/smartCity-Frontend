@@ -1,9 +1,7 @@
 import * as Actions from '../../actions'
 
 const initialState = {
-    data      : {
-        rows: []
-    },
+    data      : [],
     isLoading: false,
     error: false
 };
