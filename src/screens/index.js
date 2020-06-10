@@ -8,5 +8,5 @@ import ContactForm from './contact';
 export { 
     Home, Artisans, FreshMart, 
     Footer, Professionals,
-    ContactForm,
+    ContactForm
 };

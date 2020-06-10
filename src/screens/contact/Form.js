@@ -4,19 +4,10 @@ import { Formik } from 'formik';
 import { Form, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 
-// const FormDetails = () => {
-//     return (
-//         <>
-//             <Formik
-            
-//         </>
-//     );
-// };
-
-// export default FormDetails;
 
 
-export default  () => {
+
+const FormDetails =  () => {
     return (
       <ContactWrapper>
       <h3>Get In Touch</h3>
@@ -108,6 +99,9 @@ export default  () => {
       </ContactWrapper>
     );
   };
+
+  export default FormDetails;
+  
   
   const ContactWrapper = styled.div`
     max-width: 45rem;
