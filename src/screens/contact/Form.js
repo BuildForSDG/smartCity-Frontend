@@ -11,7 +11,7 @@ import styled from 'styled-components';
 const FormDetails =  () => {
     return (
       <ContactWrapper>
-      <h3>Get In Touch</h3>
+      <h3 className="text-center mb-5">Get In Touch</h3>
         <Formik
           initialValues={{ fullName: '', subject: '', email: '', message: '' }}
           validationSchema={yup.object({
@@ -83,7 +83,7 @@ const FormDetails =  () => {
                 </Col>
                 <Col sm="8">
                   <Form.Group controlId="contactForm">
-                    <Form.Control as="textarea"  {...formik.getFieldProps('message')} placeholder="Write message here" />
+                    <Form.Control as="textarea" rows="5"  {...formik.getFieldProps('message')} placeholder="Write message here" />
                     {formik.touched.message && formik.errors.message ? (
                       <div type="invalid"  className="text-danger">
                         {formik.errors.message}

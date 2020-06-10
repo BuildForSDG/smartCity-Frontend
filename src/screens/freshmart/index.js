@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 import { Freshy } from './Freshy';
 import { getAllProducts } from '../../store/actions';
-import { PageDisplay, ContainerDiv, ItemsWrapper, LightHeading} from '../styles'
 import SideBar from '../../components/sidebar';
 
 export const FreshMart =  ({ getAllProducts, products }) => {
@@ -60,3 +60,27 @@ const mapDispatchToProp = {
 }
 
 export default connect(mapStateToProps, mapDispatchToProp)(FreshMart);
+
+const PageDisplay = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ContainerDiv = styled.div`
+  padding: 0 5%;
+  margin-top: 5%;
+`;
+
+const ItemsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5% auto;
+  width: 100%;
+`;
+
+const LightHeading = styled.div`
+    background-color: #FFAF30;
+    color: rgba(4, 9, 110, 0.95);
+    border-radius: 5px 5px 0px 0px; 
+    text-align: center;
+ `;

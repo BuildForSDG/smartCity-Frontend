@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 import { Artisan } from './Artisan';
 import { getAllProducts } from '../../store/actions';
 import SideBar from '../../components/sidebar';
-import { 
-  PageDisplay, ContainerDiv, 
-  ItemsWrapper, DarkHeadings } from '../styles';
+import styled from 'styled-components';
 
 const Artisans = ({ getAllProducts, products }) => {
   useEffect(() => {
@@ -52,3 +50,26 @@ const mapDispatchToProp = {
 };
 export default connect(mapStateToProps, mapDispatchToProp)(Artisans);
 
+const PageDisplay = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const ContainerDiv = styled.div`
+  padding: 0 5%;
+  margin-top: 5%;
+`;
+
+const ItemsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5% auto;
+  width: 100%;
+`;
+
+const DarkHeadings = styled.div`
+color: #FFAF30;
+background-color: rgba(4, 9, 110, 0.95);
+text-align: center;
+margin-top: 7%;
+border-radius: 10px 5px 0px 0px; 
+`;
