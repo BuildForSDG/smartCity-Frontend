@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { Card } from 'react-bootstrap';
 
+export const PageDisplay = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 export const ContainerDiv = styled.div`
   padding: 0 5%;
 `

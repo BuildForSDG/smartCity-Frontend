@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Product } from './Product';
 import { getAllProducts } from '../../store/actions';
-import { ContainerDiv, ItemsWrapper } from '../styles'
+import { PageDisplay, ContainerDiv, ItemsWrapper } from '../styles';
+import SideBar from '../../components/sidebar';
 
 const Home = ({ getAllProducts, products }) => {
   useEffect(() => {
@@ -18,6 +19,8 @@ const Home = ({ getAllProducts, products }) => {
   const items = products.all.data.rows;
 
   return (
+    <PageDisplay>
+    <SideBar />
     <ContainerDiv>
       <ItemsWrapper>
         {items.map((item) => (
@@ -25,6 +28,7 @@ const Home = ({ getAllProducts, products }) => {
         ))}
       </ItemsWrapper>
     </ContainerDiv>
+    </PageDisplay>
   );
 };
 
