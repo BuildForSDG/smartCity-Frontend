@@ -16,7 +16,7 @@ export const FreshMart =  ({ getAllProducts, products }) => {
     }, []);
     console.log(2, products);
 
-    const items = products.all.data.rows;
+    const items = products.all.data;
 
     return (
         <PageDisplay>
@@ -27,7 +27,7 @@ export const FreshMart =  ({ getAllProducts, products }) => {
            </LightHeading>
           <ItemsWrapper>
             {items.map((item) => (
-                <Freshy key={item.product_id} product={item} />
+                <Freshy key={item._id} product={item} />
             ))}
           </ItemsWrapper>
         </ContainerDiv>

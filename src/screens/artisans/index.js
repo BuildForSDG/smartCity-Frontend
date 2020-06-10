@@ -16,7 +16,7 @@ const Artisans = ({ getAllProducts, products }) => {
   }, []);
   console.log(2, products);
 
-  const items = products.all.data.rows;
+  const items = products.all.data;
 
   return (
     <PageDisplay>
@@ -27,7 +27,7 @@ const Artisans = ({ getAllProducts, products }) => {
     </DarkHeadings>
       <ItemsWrapper>
           {items.map((item) => (
-              <Artisan key={item.product_id} product={item} />
+              <Artisan key={item._id} product={item} />
           ))}
       </ItemsWrapper>
     </ContainerDiv>
