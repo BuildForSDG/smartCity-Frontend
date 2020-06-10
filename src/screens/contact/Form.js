@@ -7,6 +7,7 @@ import styled from 'styled-components';
 
 
 
+
 const FormDetails =  () => {
     return (
       <ContactWrapper>
@@ -91,7 +92,7 @@ const FormDetails =  () => {
                   </Form.Group>
                 </Col>
               </Row>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <SendBtn type="submit" className="btn btn-primary">Submit</SendBtn>
               
             </Form>
           )}
@@ -106,9 +107,25 @@ const FormDetails =  () => {
   const ContactWrapper = styled.div`
     max-width: 45rem;
     margin: 0 auto;
-    background: linear-gradient(#69f0ae, #3ae374, #69f0ae);
+    background: linear-gradient(rgba(4,9,110,0.1), #FFAF30, #FFAF30);
     padding: 1rem 0.7rem;
     -webkit-box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.4);
     -moz-box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.4);
     box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.4);
+  `;
+
+  const SendBtn = styled.button`
+  color: #fff;
+  background-color: rgba(4, 9, 110, 0.95);
+  border: none;
+  display: block;
+  padding: 0.7rem 1.2rem;
+  transition: background 1s;
+  :hover {
+    opacity: 9;
+    color: #FFAF30
+  }
+  @media(max-widh: 500px){
+    padding: 1rem;
+  }
   `;

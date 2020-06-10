@@ -1,10 +1,15 @@
 import React from 'react';
 import FormDetails from './Form';
+import { ContainerDiv, DarkHeadings } from '../styles';
 
 const ContactForm = () => (
     <>
-    Contact form
-    <FormDetails />
+    <ContainerDiv>
+    <DarkHeadings className="py-3 mb-4 mt-0">
+    <h1>Contact Us</h1>
+    </DarkHeadings>
+        <FormDetails />
+    </ContainerDiv>
     </>
 );
 
