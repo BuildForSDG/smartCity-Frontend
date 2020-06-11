@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getAllProducts } from '../../store/actions';
 import { Profession } from './Profession';
-import { ContainerDiv, ItemsWrapper } from '../styles';
+import styled from 'styled-components';
 
 
 const Professionals =  ({ getAllProducts, products }) => {
@@ -45,3 +45,15 @@ const mapDispatchToProp = {
 }
 
 export default connect(mapStateToProps, mapDispatchToProp)(Professionals);
+
+const ContainerDiv = styled.div`
+  padding: 0 5%;
+  margin-top: 5%;
+`;
+
+const ItemsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5% auto;
+  width: 100%;
+`;
