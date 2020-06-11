@@ -110,27 +110,27 @@ This starter uses [Parcel](https://parceljs.org/getting_started.html) as the bun
 
 **Buildforsdg Team-241**
 
-     #### Mentor	
--Lewis Tanguhwar	
+ #### Mentor	
+-Lewis Tanguhwar  
 Github: https://github.com/lewikeezy
 
-    ####Technical Team Lead	
-- Nkwuda Sunday Cletus 	
-Github: https://github.com/sunny775	
-Twitter: https://twitter.com/scetus40	
+ #### Technical Team Lead	
+- Nkwuda Sunday Cletus  
+Github: https://github.com/sunny775	  
+Twitter: https://twitter.com/scetus40	  
 Linkedin: https://www.linkedin.com/sunday-nkwuds-04aa57a7/
 
-   ####Team members and roles played
+  #### Team members and roles played
 	
--Emouhwo Warri - Frontend Developement		
-Github:  https://github.com/Emuohwo	
-Facebook:  https://www.facebook.com/warriisaac.emuohwo	
-Twitter: https://mobile.twitter.com/wise_shore
+-Emouhwo Warri - Frontend Developement  
+Github:  https://github.com/Emuohwo	  
+Facebook:  https://www.facebook.com/warriisaac.emuohwo  
+Twitter: https://mobile.twitter.com/wise_shore    
 Linkedin:  https://www.linkedin.com/mwlite/in/isaac-warri-8b2181131	
 
--Joseph Shalom - Documentation	
-Github: https://github.com/shalom60	
-Twitter: https://mobile.twitter.com/J_bowlu	
+-Joseph Shalom - Documentation  
+Github: https://github.com/shalom60	  
+Twitter: https://mobile.twitter.com/J_bowlu 
 Linkedin: https://www.linkedin.com/in/shalom-joseph-90b844199		
 
 ## Contributing
@@ -142,12 +142,12 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 
 ## Acknowledgements
 
--Facebook Developer Circles & Andela Team Members	
--#BuildforSDG Challenge Program	
--Joy Ejiofor - Coordinator	
+-Facebook Developer Circles & Andela Team Members	  
+-#BuildforSDG Challenge Program	  
+-Joy Ejiofor - Coordinator  
 -Sam Esidem- Senior Software Enginner
 
-**Thanks for the opportunity and support all the way.**
+**Thank You! for the opportunity and support all the way.**
 
 
 ## LICENSE
