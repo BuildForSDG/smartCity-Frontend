@@ -106,9 +106,9 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 ## Acknowledgements
 
 Facebook Developer Circles & Andela Team Members	  
-#BuildforSDG Challenge Program	  
-Joy Ejiofor - Coordinator  
-Sam Esidem- Senior Software Enginner
+Every member of the #BuildForSDG Team:	  
+Joy Ejiofor
+Sam Esidem
 
 **Thank You! for the opportunity and support all the way.**
 
