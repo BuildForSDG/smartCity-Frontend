@@ -73,17 +73,17 @@ Customers/clients are able to:
 
 **Buildforsdg Team-241**
 
- #### Mentor	
+ ### Mentor	
 Lewis Tanguhwar  
 Github: <https://github.com/lewikeez>
 
- #### Technical Team Lead
+ ### Technical Team Lead
 Nkwuda Sunday Cletus  
 Github: <https://github.com/sunny775>	  
 Twitter: <https://twitter.com/scetus40>	  
 Linkedin: <https://www.linkedin.com/sunday-nkwuds-04aa57a7/>
 
-  #### Team members and roles played
+  ### Team members and roles played
 	
 Emouhwo Warri - Frontend Developement  
 Github:  <https://github.com/Emuohwo>	  
@@ -105,10 +105,10 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 
 ## Acknowledgements
 
-- Facebook Developer Circles & Andela Team Members	  
-- #BuildforSDG Challenge Program	  
-- Joy Ejiofor - Coordinator  
-- Sam Esidem- Senior Software Enginner
+Facebook Developer Circles & Andela Team Members	  
+#BuildforSDG Challenge Program	  
+Joy Ejiofor - Coordinator  
+Sam Esidem- Senior Software Enginner
 
 **Thank You! for the opportunity and support all the way.**
 
