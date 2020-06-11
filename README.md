@@ -46,26 +46,26 @@ On user log in:
 
 **For FreshMart**   
 A seller is able to:   
-* Upload products for sale including: name, price, description, image, discount, quantity left e.g 20 bags.   
-* View his order history/sales.   
-* Delete products.
+- Upload products for sale including: name, price, description, image, discount, quantity left e.g 20 bags.   
+- View his order history/sales.   
+- Delete products.
 
 A buyer is able to:   
-* Search for products.
-* Add products to cart. 
-* View cart later.
-* Whishlist products.
-* Make payments on the web app through their debit/credit cards.  
+- Search for products.
+- Add products to cart. 
+- View cart later.
+- Whishlist products.
+- Make payments on the web app through their debit/credit cards.  
 
 **For Artisans**  
 service Providers are able to:   
-* Upload their profile including description/port folio of their services, profession and skills.   
-* Drop their contact details and address.   
+- Upload their profile including description/port folio of their services, profession and skills.   
+- Drop their contact details and address.   
 
 Customers/clients are able to: 
-* Search for services needed.
-* View profile of service providers and make contact. 
-* Make payments on the web app through their debit/credit cards.
+- Search for services needed.
+- View profile of service providers and make contact. 
+- Make payments on the web app through their debit/credit cards.
 
 *Payments are withheld until customers or clients confirm satisfaction with the quantity/quality of products or services delivered, then payment is released to the seller or service provider.*
 
@@ -77,7 +77,7 @@ Customers/clients are able to:
 Lewis Tanguhwar  
 Github: <https://github.com/lewikeez>
 
- #### Technical Team Lead	
+ #### Technical Team Lead
 Nkwuda Sunday Cletus  
 Github: <https://github.com/sunny775>	  
 Twitter: <https://twitter.com/scetus40>	  
@@ -85,13 +85,13 @@ Linkedin: <https://www.linkedin.com/sunday-nkwuds-04aa57a7/>
 
   #### Team members and roles played
 	
--Emouhwo Warri - Frontend Developement  
+Emouhwo Warri - Frontend Developement  
 Github:  <https://github.com/Emuohwo>	  
 Facebook:  <https://www.facebook.com/warriisaac.emuohwo> 
 Twitter: <https://mobile.twitter.com/wise_shore>  
 Linkedin:  <https://www.linkedin.com/mwlite/in/isaac-warri-8b2181131>
 
--Joseph Shalom - Documentation  
+Joseph Shalom - Documentation  
 Github: <https://github.com/shalom60>  
 Twitter: <https://mobile.twitter.com/J_bowlu>
 Linkedin: <https://www.linkedin.com/in/shalom-joseph-90b844199>	
@@ -105,10 +105,10 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 
 ## Acknowledgements
 
-* Facebook Developer Circles & Andela Team Members	  
-* #BuildforSDG Challenge Program	  
-* Joy Ejiofor - Coordinator  
-* Sam Esidem- Senior Software Enginner
+- Facebook Developer Circles & Andela Team Members	  
+- #BuildforSDG Challenge Program	  
+- Joy Ejiofor - Coordinator  
+- Sam Esidem- Senior Software Enginner
 
 **Thank You! for the opportunity and support all the way.**
 
