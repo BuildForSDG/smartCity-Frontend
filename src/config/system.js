@@ -1,7 +1,7 @@
 const system = {
-    appName: 'SHOPMATE',
-    serverBaseUrl: 'https://backendapi.turing.com',
-    imageBaseUrl: 'https://backendapi.turing.com/images/products/',
+    appName: 'SMARTCITY',
+    serverBaseUrl: 'https://nameless-reaches-59547.herokuapp.com',
+    imageBaseUrl: 'https://nameless-reaches-59547.herokuapp.com/products/images',
     stripeToken: 'pk_test_NcwpaplBCuTL6I0THD44heRe'
 };
 

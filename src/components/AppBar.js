@@ -13,7 +13,9 @@ export const AppBar = () =>
     <NavItem style={styles.root}><Link to='/' style={styles.item}>Home</Link></NavItem>
     <NavItem style={styles.root}><Link to='/freshmart' style={styles.item}>Freshmart</Link></NavItem>
     <NavItem style={styles.root}><Link to='/artisans' style={styles.item}>Artisans</Link></NavItem>
-    <NavItem style={styles.root}><Link to='/professionals' style={styles.item}>Professionals</Link></NavItem>
+    <NavItem style={styles.root}><Link to='/register' style={styles.item}>Register</Link></NavItem>
+    <NavItem style={styles.root}><Link to='/account' style={styles.item}>Account</Link></NavItem>
+    <NavItem style={styles.root}><Link to='/contact' style={styles.item}>Contact Us</Link></NavItem>
     <NavDropdown title="Other Services" id="basic-nav-dropdown" style={styles.root}>
       <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
       <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
