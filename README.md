@@ -1,4 +1,4 @@
-## BuildForSDG/team-241 SmartCity (Frontend)
+﻿## BuildForSDG/team-241 SmartCity (Frontend)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/13b087a11c924da1bed71c536993fe0b)](https://app.codacy.com/gh/BuildForSDG/smartCity-Frontend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/smartCity-Frontend&utm_campaign=Badge_Grade_Dashboard)
 
@@ -13,13 +13,14 @@ It is developed as a web application that contains the following main contents.
 
 #### FreshMart
 
-The FreshMart page is an online store where farmers and food producers upload products of any kind, vegetables, crops, pastry, meat and even livestocks e.t.c. which are mostly consumables and perishables.
+The FreshMart page is an online store where farmers, food producers, restaurants and others  upload products of the following categories, **Fruits**, **Vegetables**, **Snacks**, **Frozen foods**, **Lunch(from food vendors and restaurants)** and **Cakes**, which are readily available for sale.
 
-interested buyers come to the freshmart page to shop and identify products they want, they are allowed to add products to cart, make instant orders and payment, and even make contact with the seller. The buyer's orders are delivered to the stated buyer's address in due estimated  time.
+Interested buyers come to the freshmart page to shop and identify products they want, they are allowed to add products to cart, make instant orders and payment, and even make contact with the seller. The buyer's orders are delivered to the stated buyer's address in due estimated  time.
 
 #### Artisans
 
-The Artisan page features various kinds of artisans such as barbers, carwash, machanics, electricians, hair stylists, plumbers, e.t.c. from every nook and cranny of as much localities as possible.  
+The Artisan page features various kinds of artisans in categories such as **Beauty & Makeup Artistry**, **Electrical Works**, **Hair Styling(male and female)**, **Barbing Saloons**, **Fashion**, **Event Planning & Catering (chefs inclusive)**, **Home and Office Cleaning**, **Laundry(dry cleaning)**, **Photography & Arts**, **Creative Designs(graphic designs and animations)**, **Web, Mobile & Software Artisans**, from every nook and cranny of as much localities as possible.  
+
 A user in need of one of such services can go to the artisans page, locate the workman in closest proximity  and hire the artisan for services. SmartCity also facilitate the payment process so no one gets cheated.
 
 #### Professionals
@@ -107,7 +108,30 @@ This starter uses [Parcel](https://parceljs.org/getting_started.html) as the bun
 
 ## Authors
 
-List the team behind this project. Their names linked to their Github, LinkedIn, or Twitter accounts should siffice. Ok to signify the role they play in the project, including the TTL and mentor
+**Buildforsdg Team-241**
+
+     #### Mentor	
+-Lewis Tanguhwar	
+Github: https://github.com/lewikeezy
+
+    ####Technical Team Lead	
+- Nkwuda Sunday Cletus 	
+Github: https://github.com/sunny775	
+Twitter: https://twitter.com/scetus40	
+Linkedin: https://www.linkedin.com/sunday-nkwuds-04aa57a7/
+
+   ####Team members and roles played
+	
+-Emouhwo Warri - Frontend Developement		
+Github:  https://github.com/Emuohwo	
+Facebook:  https://www.facebook.com/warriisaac.emuohwo	
+Twitter: https://mobile.twitter.com/wise_shore
+Linkedin:  https://www.linkedin.com/mwlite/in/isaac-warri-8b2181131	
+
+-Joseph Shalom - Documentation	
+Github: https://github.com/shalom60	
+Twitter: https://mobile.twitter.com/J_bowlu	
+Linkedin: https://www.linkedin.com/in/shalom-joseph-90b844199		
 
 ## Contributing
 If this project sounds interesting to you and you'd like to contribute, thank you!
@@ -118,11 +142,13 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 
 ## Acknowledgements
 
-Did you use someone else’s code?
-Do you want to thank someone explicitly?
-Did someone’s blog post spark off a wonderful idea or give you a solution to nagging problem?
+-Facebook Developer Circles & Andela Team Members	
+-#BuildforSDG Challenge Program	
+-Joy Ejiofor - Coordinator	
+-Sam Esidem- Senior Software Enginner
 
-It's powerful to always give credit.
+**Thanks for the opportunity and support all the way.**
+
 
 ## LICENSE
 MIT
