@@ -10,7 +10,7 @@ const products = combineReducers({
     fruits: inCategory('fruits'),
     vegetables: inCategory('vegetables'),
     snacks: inCategory('snacks'),
-    frozenFoods:  inCategory('frozen-foods'),
+    frozen:  inCategory('frozen'),
     lunch: inCategory('lunch'),
     cakes:  inCategory('cakes')
 });

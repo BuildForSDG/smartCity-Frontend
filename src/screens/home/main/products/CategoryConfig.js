@@ -24,7 +24,7 @@ const LightHeading = styled.h2`
   text-align: center;
 `;
 const Category = styled.div`
-  box-shadow: 2px 2px 48px 48px #eee;
+  box-shadow: 2px 2px 24px 24px #f5f5f5;
   padding: 20px;
   margin: 20px;
   border-radius: 10px;

@@ -13,7 +13,7 @@ const Section = styled.section`
 const Fruits = Config(1, 'fruits')
 const Vegetables = Config(2, 'vegetables')
 const Snacks = Config(3, 'snacks')
-const FrozenFoods = Config(4, 'frozen-foods')
+const FrozenFoods = Config(4, 'frozen')
 const Lunch = Config(5, 'lunch')
 const Cakes = Config(6, 'cakes')
 
