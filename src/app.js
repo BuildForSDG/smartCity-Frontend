@@ -1,15 +1,18 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import styled from 'styled-components'
 import { AppBar } from './components/AppBar';
 import Footer from './components/footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee, faEnvelope, faEllipsisV, faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { fonts } from './utils/fonts'
 import { Home, Artisans, FreshMart, ContactForm, Register, Account } from './screens';
-library.add(fab, faCheckSquare, faCoffee, faEnvelope, faShareAlt, faEllipsisV);
+library.add(...fonts);
 
+const Div = styled.div`
+font-family: 'Montserrat', sans-serif;
+`
 const App = () => (
-  <>
+  <Div>
     <AppBar />
     <Switch>
       <Route path="/freshmart">
@@ -32,6 +35,6 @@ const App = () => (
       </Route>
     </Switch>
     <Footer />
-  </>
+  </Div>
 );
 export default App;

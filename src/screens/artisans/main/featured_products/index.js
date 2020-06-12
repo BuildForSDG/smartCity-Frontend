@@ -25,9 +25,8 @@ const LightHeading = styled.h2`
 const FeaturedProducts = ({ getAllProducts, products }) => {
   useEffect(() => {
     getAllProducts({
-      page: 1,
-      limit: 12,
-      description_length: 120
+      type: 'products',
+      limit: 12
     });
   }, []);
   console.log(2, products);
