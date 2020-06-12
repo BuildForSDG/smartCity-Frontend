@@ -95,7 +95,7 @@ class productsService extends EventEmitter {
     });
   }
 
-  searchProducts({ type, queryString, limit }) {
+  searchItems({ type, queryString, limit }) {
     return new Promise((resolve, reject) => {
       axios
         .get(systemConfig.serverBaseUrl + `/${type}/search`, {
@@ -114,7 +114,7 @@ class productsService extends EventEmitter {
   }
 
   /* ---------------------------------------------- */
-  /* The Following Methods are for a single product */
+  /* The Following Methods are for a single Items */
   /* ---------------------------------------------- */
 
   getItemById({ type, id }) {

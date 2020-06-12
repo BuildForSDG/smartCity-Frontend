@@ -25,7 +25,7 @@ export const Promo = () => (
           </Column>
           <Col sm="6">
             <p>Instant doorstep delivery</p>
-            <small>orders over #1500</small>
+            <small>Orders over #1500</small>
           </Col>
         </Row>
       </Col>
