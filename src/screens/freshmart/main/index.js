@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import FeaturedProducts from './featured_products';
 import Banner  from '../../../components/Banner';
-import { Promo} from '../../../components/Promo'
 
 const Section = styled.section`
   width: 100%;
@@ -23,7 +22,6 @@ const Section = styled.section`
 const Main = () => (
   <Section className="col-sm-9">
     <Banner />
-    <Promo />
     <FeaturedProducts />
   </Section>
 );

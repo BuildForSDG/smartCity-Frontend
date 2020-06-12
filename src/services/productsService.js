@@ -14,14 +14,12 @@ class productsService extends EventEmitter {
     axios.defaults.headers.common['Accept'] = 'application/json';
   }
 
-  getAllProducts({ page, limit, description_length}) {
+  getAllProducts({type,  limit}) {
     return new Promise((resolve, reject) => {
       axios
-        .get(systemConfig.serverBaseUrl + '/products', {
+        .get(systemConfig.serverBaseUrl + `/${type}`, {
           params: {
-            page,
-            limit,
-            description_length
+            limit
           }
         })
         .then((response) => {
