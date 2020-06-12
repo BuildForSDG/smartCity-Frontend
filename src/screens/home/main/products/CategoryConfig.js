@@ -47,6 +47,13 @@ function Config(id, name) {
         name
       });
     }, []);
+    const handleClick = () => {
+      getCategoryProducts({
+        type: 'products',
+        categoryId: id,
+        name
+      });
+    }
 
     let { data, error, isLoading } = products[name];
 
@@ -55,7 +62,7 @@ function Config(id, name) {
       state || (
         <Category>
             <H>{name}</H>
-            <Btn variant=" outlined primary" size='sm'>view all</Btn>
+            <Btn variant=" outlined primary" size='sm' onClick={handleClick} >view all</Btn>
           <LightHeading></LightHeading>
           <Deck>
             {data.map((item) => (
