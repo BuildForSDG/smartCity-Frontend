@@ -14,7 +14,7 @@ class productsService extends EventEmitter {
     axios.defaults.headers.common['Accept'] = 'application/json';
   }
 
-  getAllProducts({type,  limit}) {
+  getAllProducts({ type, limit }) {
     return new Promise((resolve, reject) => {
       axios
         .get(systemConfig.serverBaseUrl + `/${type}`, {
@@ -30,29 +30,13 @@ class productsService extends EventEmitter {
         });
     });
   }
-   /*async getAllProducts({ page, limit, description_length }){
-      const products = await axios
-        .get(systemConfig.serverBaseUrl + '/products', {
-          params: {
-            page,
-            limit,
-            description_length
-          }
-        })
-        console.log('prf', products.data)
-        return products.data
-  }*/
 
-  searchProducts({ query_string, all_words, page, limit, description_length }) {
+  getItemsInCategory({ type, categoryId, limit }) {
     return new Promise((resolve, reject) => {
       axios
-        .get(systemConfig.serverBaseUrl + '/products/search', {
+        .get(systemConfig.serverBaseUrl + `/${type}/inCategory/${categoryId}`, {
           params: {
-            query_string,
-            all_words,
-            page,
-            limit,
-            description_length
+            limit
           }
         })
         .then((response) => {
@@ -64,10 +48,14 @@ class productsService extends EventEmitter {
     });
   }
 
-  getProductsInCategory({ category_id }) {
+  getItemsInLocation({ type, location, limit }) {
     return new Promise((resolve, reject) => {
       axios
-        .get(systemConfig.serverBaseUrl + `/products/inCategory/${category_id}`)
+        .get(systemConfig.serverBaseUrl + `/${type}/inLocation/${location}`, {
+          params: {
+            limit
+          }
+        })
         .then((response) => {
           resolve(response.data);
         })
@@ -77,10 +65,45 @@ class productsService extends EventEmitter {
     });
   }
 
-  getProductsInDepartment({ department_id }) {
+  getItemsInCategoryAndLocation({ type, categoryId, location }) {
     return new Promise((resolve, reject) => {
       axios
-        .get(systemConfig.serverBaseUrl + `/products/inDepartment/${department_id}`)
+        .get(systemConfig.serverBaseUrl + `/${type}/inCategory/${categoryId}/inLocation/${location}`)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error.response);
+        });
+    });
+  }
+
+  getProductsInRange({ from, to, limit }) {
+    return new Promise((resolve, reject) => {
+      axios
+        .get(systemConfig.serverBaseUrl + `/products/inRange/${from}-${to}`, {
+          params: {
+            limit
+          }
+        })
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error.response);
+        });
+    });
+  }
+
+  searchProducts({ type, queryString, limit }) {
+    return new Promise((resolve, reject) => {
+      axios
+        .get(systemConfig.serverBaseUrl + `/${type}/search`, {
+          params: {
+            queryString,
+            limit
+          }
+        })
         .then((response) => {
           resolve(response.data);
         })
@@ -94,10 +117,10 @@ class productsService extends EventEmitter {
   /* The Following Methods are for a single product */
   /* ---------------------------------------------- */
 
-  getProductById({ product_id }) {
+  getItemById({ type, id }) {
     return new Promise((resolve, reject) => {
       axios
-        .get(systemConfig.serverBaseUrl + `/products/${product_id}`)
+        .get(systemConfig.serverBaseUrl + `/${type}/${id}`)
         .then((response) => {
           resolve(response.data);
         })
@@ -107,10 +130,10 @@ class productsService extends EventEmitter {
     });
   }
 
-  getProductDetails({ product_id }) {
+  getItemReviews({ type, id }) {
     return new Promise((resolve, reject) => {
       axios
-        .get(systemConfig.serverBaseUrl + `/products/${product_id}/details`)
+        .get(systemConfig.serverBaseUrl + `/${type}/${id}/reviews`)
         .then((response) => {
           resolve(response.data);
         })
@@ -120,41 +143,14 @@ class productsService extends EventEmitter {
     });
   }
 
-  getProductLocations({ product_id }) {
+  createItemReview({ type, id, review }) {
     return new Promise((resolve, reject) => {
       axios
-        .get(systemConfig.serverBaseUrl + `/products/${product_id}/locations`)
+        .post(systemConfig.serverBaseUrl + `/${type}/${id}/reviews`, {
+          ...review
+        })
         .then((response) => {
           resolve(response.data);
-        })
-        .catch((error) => {
-          reject(error.response);
-        });
-    });
-  }
-
-  getProductReviews({ product_id }) {
-    return new Promise((resolve, reject) => {
-      axios
-        .get(systemConfig.serverBaseUrl + `/products/${product_id}/reviews`)
-        .then((response) => {
-          resolve(response.data);
-        })
-        .catch((error) => {
-          reject(error.response);
-        });
-    });
-  }
-
-  createProductReview({ product_id, review, rating }) {
-    return new Promise((resolve, reject) => {
-      axios
-        .post(systemConfig.serverBaseUrl + `/products/${product_id}/reviews`, {
-          review,
-          rating
-        })
-        .then((response) => {
-          resolve(response.data.user);
         })
         .catch((error) => {
           reject(error.response);
