@@ -10,7 +10,7 @@ export default function* productsSaga() {
         getCategoryProductsWatcher('fruits'),
         getCategoryProductsWatcher('vegetables'),
         getCategoryProductsWatcher('snacks'),
-        getCategoryProductsWatcher('frozen-foods'),
+        getCategoryProductsWatcher('frozen'),
         getCategoryProductsWatcher('lunch'),
         getCategoryProductsWatcher('cakes')
     ]);
