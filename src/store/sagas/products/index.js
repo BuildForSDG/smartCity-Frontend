@@ -6,12 +6,19 @@ import { getCategoryProductsWatcher } from './in_category.saga'
 export default function* productsSaga() {
     yield all([
         getAllProductsWatcher(),
-        getLocationProductsWatcher(),
         getCategoryProductsWatcher('fruits'),
         getCategoryProductsWatcher('vegetables'),
         getCategoryProductsWatcher('snacks'),
         getCategoryProductsWatcher('frozen'),
         getCategoryProductsWatcher('lunch'),
-        getCategoryProductsWatcher('cakes')
+        getCategoryProductsWatcher('cakes'),
+        getLocationProductsWatcher('Lekki'),
+        getLocationProductsWatcher('Ajah'),
+        getLocationProductsWatcher('Obalende'),
+        getLocationProductsWatcher('Anthony'),
+        getLocationProductsWatcher('VGC'),
+        getLocationProductsWatcher('Festac'),
+        getLocationProductsWatcher('Oshodi'),
+        getLocationProductsWatcher('Gbagada')
     ]);
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import FeaturedProducts from './featured_products';
+import FeaturedArtisans from './featured_artisans';
 import Banner  from '../../../components/Banner';
 
 const Section = styled.section`
@@ -22,7 +22,7 @@ const Section = styled.section`
 const Main = () => (
   <Section className="col-sm-9">
     <Banner />
-    <FeaturedProducts />
+    <FeaturedArtisans />
   </Section>
 );
 export default Main;

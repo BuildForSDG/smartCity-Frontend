@@ -1,15 +1,13 @@
-import * as Actions from '../../actions';
+import * as Actions from '../../actions'
 
 const initialState = {
-    data: {
-        rows: []
-    },
+    data      : [],
     isLoading: false,
     error: false
-}
+};
 
-const allArtisansReducer = ( state = initialState, action) => {
-    switch (action.type) 
+const allArtisansReducer = function (state = initialState, action) {
+    switch ( action.type )
     {
         case Actions.GET_ALL_ARTISANS:
         {
@@ -26,21 +24,21 @@ const allArtisansReducer = ( state = initialState, action) => {
                 data: action.payload,
                 isLoading: false,
                 error: false
-            }
+            };
         }
-        case Actions.GET_ALL_ARTISANS_ERROR: 
+        case Actions.GET_ALL_ARTISANS_ERROR:
         {
             return {
                 ...state,
                 isLoading: false,
                 error: action.payload
-            }
+            };
         }
         default:
+        {
             return state;
-        
+        }
     }
-    
 };
 
 export default allArtisansReducer;

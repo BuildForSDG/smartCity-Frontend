@@ -10,19 +10,20 @@ import {
 function* getLocationProductsSaga(action) {
     try {
         const data = yield call(productsService.getItemsInLocation, action.payload);
+        const { name } = action.payload
         yield put({
-            type: GET_LOCATION_PRODUCTS_SUCCESS,
+            type: GET_LOCATION_PRODUCTS_SUCCESS+name,
             payload: data
         });
 
     } catch (error) {
         yield put({
-            type: GET_LOCATION_PRODUCTS_ERROR, payload: error
+            type: GET_LOCATION_PRODUCTS_ERROR+name, payload: error
         });
     }
 }
 
 
-export function* getLocationProductsWatcher() {
-    yield takeLatest(GET_LOCATION_PRODUCTS, getLocationProductsSaga);
+export function* getLocationProductsWatcher(name) {
+    yield takeLatest(GET_LOCATION_PRODUCTS+name, getLocationProductsSaga);
 }

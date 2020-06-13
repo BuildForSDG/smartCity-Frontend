@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns, Button } from 'react-bootstrap';
 import { Product } from './Product';
-import { Loading } from '../../../../components/alerts/loading';
-import { ErrorAlert } from '../../../../components/alerts/errorAlert';
-import { getCategoryProducts } from '../../../../store/actions';
+import { Loading } from '../alerts/loading';
+import { ErrorAlert } from '../alerts/errorAlert';
+import { getLocationProducts } from '../../store/actions';
 
 const Deck = styled(CardColumns)`
   margin: 20px auto;
@@ -23,7 +23,7 @@ const LightHeading = styled.h2`
   margin-top: 50px;
   text-align: center;
 `;
-const Category = styled.div`
+const Location = styled.div`
   box-shadow: 2px 2px 24px 24px #f5f5f5;
   padding: 20px;
   margin: 20px;
@@ -37,31 +37,32 @@ float: left;
 text-transform: capitalize;
 `
 
-function Config(id, name) {
-  const Comp = ({ getCategoryProducts, products }) => {
+function LocationConfig(location, name) {
+  const Comp = ({ getLocationProducts, products }) => {
     useEffect(() => {
-      getCategoryProducts({
+      getLocationProducts({
         type: 'products',
-        categoryId: id,
+        location,
         limit: 3,
         name
       });
     }, []);
     const handleClick = () => {
-      getCategoryProducts({
+      getLocationProducts({
         type: 'products',
-        categoryId: id,
+        location,
         name
       });
     }
+    // location === 'Lekki'? 'Lekki I': location === 'Gbagada'? 'Gbagada Phase 1' : location
 
     let { data, error, isLoading } = products[name];
 
     const state = error ? <ErrorAlert /> : isLoading ? <Loading /> : null;
     return (
       state || (
-        <Category>
-            <H>{name}</H>
+        <Location>
+            <H>{location}</H>
             <Btn variant=" outlined primary" size='sm' onClick={handleClick} >view all</Btn>
           <LightHeading></LightHeading>
           <Deck>
@@ -69,13 +70,13 @@ function Config(id, name) {
               <Product key={item._id} product={item} />
             ))}
           </Deck>
-        </Category>
+        </Location>
       )
     );
   };
 
   Comp.propTypes = {
-    getCategoryProducts: PropTypes.func,
+    getLocationProducts: PropTypes.func,
     products: PropTypes.object
   };
   const mapStateToProps = ({ products }) => {
@@ -84,9 +85,9 @@ function Config(id, name) {
     };
   };
   const mapDispatchToProp = {
-    getCategoryProducts
+    getLocationProducts
   };
   const exp = connect(mapStateToProps, mapDispatchToProp)(Comp);
   return exp;
 }
-export default Config;
+export default LocationConfig;
