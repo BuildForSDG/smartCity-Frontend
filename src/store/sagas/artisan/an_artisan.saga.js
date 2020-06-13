@@ -1,5 +1,5 @@
 import { put, takeLatest, call } from 'redux-saga/effects';
-import artisansServices from '../../../services/artisansServices';
+import services from '../../../services/productsService';
 import { 
     GET_AN_ARTISAN,
     GET_AN_ARTISAN_SUCCESS,
@@ -8,7 +8,7 @@ import {
 
 function* anArtisanSaga(action) {
     try {
-        const data = yield call(artisansServices.getAnArtisanById, action.payload);
+        const data = yield call(services.getItemById, action.payload);
         yield put({
             type: GET_AN_ARTISAN_SUCCESS,
             payload: data

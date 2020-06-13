@@ -4,6 +4,6 @@ export const GET_LOCATION_PRODUCTS_SUCCESS = 'GET_LOCATION_PRODUCTS_SUCCESS';
 
 
 export const getLocationProducts = (data) => ({
-    type: GET_LOCATION_PRODUCTS,
+    type: GET_LOCATION_PRODUCTS+data.name,
     payload: data
 });

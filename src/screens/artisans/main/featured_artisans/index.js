@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns } from 'react-bootstrap';
-import { Product } from './Product';
-import { getAllProducts } from '../../../../store/actions';
+import { Artisan } from './Artisan';
+import { getAllArtisans } from '../../../../store/actions';
 
 const Deck = styled(CardColumns)`
   margin: 20px auto;
@@ -22,38 +22,37 @@ const LightHeading = styled.h2`
   text-align: center;
 `;
 
-const FeaturedProducts = ({ getAllProducts, products }) => {
+const FeaturedArtisans = ({ getAllArtisans, artisans }) => {
   useEffect(() => {
-    getAllProducts({
-      type: 'products',
-      limit: 12
+    getAllArtisans({
+      type: 'artisans',
+      limit: 15
     });
   }, []);
-  console.log(2, products);
 
-  const items = products.all.data;
+  const items = artisans.all.data;
   return (
     <div>
-      <LightHeading className="py-2">Featured Products</LightHeading>
+      <LightHeading className="py-2">Featured Artisans</LightHeading>
       <Deck>
         {items.map((item) => (
-          <Product key={item._id} product={item} />
+          <Artisan key={item._id} artisan={item} />
         ))}
       </Deck>
     </div>
   );
 };
 
-FeaturedProducts.propTypes = {
-  getAllProducts: PropTypes.func,
-  products: PropTypes.object
+FeaturedArtisans.propTypes = {
+  getAllArtisans: PropTypes.func,
+  artisans: PropTypes.object
 };
-const mapStateToProps = ({ products }) => {
+const mapStateToProps = ({ artisans }) => {
   return {
-    products
+    artisans
   };
 };
 const mapDispatchToProp = {
-  getAllProducts
+  getAllArtisans
 };
-export default connect(mapStateToProps, mapDispatchToProp)(FeaturedProducts);
+export default connect(mapStateToProps, mapDispatchToProp)(FeaturedArtisans);

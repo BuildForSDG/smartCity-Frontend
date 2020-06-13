@@ -2,9 +2,10 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import config from '../../../../config/system';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import config from '../../config/system';
 
-const ProductCard = styled(Card)`
+const ArtisanCard = styled(Card)`
   border: none;
   font-size: 0.6rem;
   background: rgba(230, 230, 230, 0.2);
@@ -28,27 +29,30 @@ const CartBtn = styled(Button)`
   }
 `;
 const Title = styled(Card.Title)`
-font-size: 0.8rem;
-`
+  font-size: 0.8rem;
+`;
 
-
-export const Product = ({ product }) => {
-  const { description, name, price, filename } = product;
+export const Artisan = ({ artisan }) => {
+  const { description, name, filename } = artisan;
   return (
     <div>
-      <ProductCard style={{ maxWidth: '14rem' }}>
-        <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
+      <ArtisanCard style={{ maxWidth: '14rem' }}>
+        <Card.Img variant="top" src={`${config.ArtisanImageUrl}/${filename}`} style={{ height: 150 }} />
         <Card.Body>
           <Title>{name}</Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
-          <Button variant=" outlined primary" size='sm'>${price}</Button>
-          <CartBtn variant="primary" size='sm'>Add to cart</CartBtn>
+           <Button size='sm' variant='default'>
+           <FontAwesomeIcon icon="eye"/>
+           </Button>
+            <CartBtn variant="primary" size="sm">
+              Hire now
+            </CartBtn>
         </Card.Body>
-      </ProductCard>
+      </ArtisanCard>
     </div>
   );
 };
 
-Product.propTypes = {
-  product: PropTypes.object.isRequired
+Artisan.propTypes = {
+  artisan: PropTypes.object.isRequired
 };

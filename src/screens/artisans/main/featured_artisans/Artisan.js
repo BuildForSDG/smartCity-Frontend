@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import config from '../../../../config/system';
 
-const ProductCard = styled(Card)`
+const ArtisanCard = styled(Card)`
   border: none;
   background: rgba(255, 255, 255, 0.3);
   :hover {
@@ -27,23 +27,23 @@ const CartBtn = styled(Button)`
   }
 `;
 
-export const Product = ({ product }) => {
-  const { description, name, price, filename } = product;
+export const Artisan = ({ artisan }) => {
+  const { description, name, price, filename } = artisan;
   return (
     <div>
-      <ProductCard style={{ width: '17rem' /*,margin:'20px auto'*/ }}>
-        <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
+      <ArtisanCard style={{ maxWidth: '17rem' /*,margin:'20px auto'*/ }}>
+        <Card.Img variant="top" src={`${config.ArtisanImageUrl}/${filename}`} style={{ height: 150 }} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
           <Button variant=" outlined primary">${price}</Button>
-          <CartBtn variant="primary">Add to cart</CartBtn>
+          <CartBtn variant="primary">Hire now</CartBtn>
         </Card.Body>
-      </ProductCard>
+      </ArtisanCard>
     </div>
   );
 };
 
-Product.propTypes = {
-  product: PropTypes.object.isRequired
+Artisan.propTypes = {
+  artisan: PropTypes.object.isRequired
 };
