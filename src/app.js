@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { AppBar } from './components/AppBar';
 import Footer from './components/footer';
 import ProductDetails from './components/ProductDetails';
+import ArtisanDetails from './components/ArtisanDetails'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fonts } from './utils/fonts';
 import { Home, Artisans, FreshMart, ContactForm, Register, Account } from './screens';
@@ -23,6 +24,9 @@ const App = () => (
       </Route>
       <Route path="/freshmart">
         <FreshMart />
+      </Route>
+      <Route path="/artisan/:id/details">
+        <ArtisanDetails />
       </Route>
       <Route path="/artisans">
         <Artisans />
