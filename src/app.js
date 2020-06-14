@@ -25,10 +25,10 @@ const App = () => (
       <Route path="/freshmart">
         <FreshMart />
       </Route>
-      <Route path="/artisan/:id/details">
+      <Route path="/artisans/:id/details">
         <ArtisanDetails />
       </Route>
-      <Route path="/artisans">
+      <Route exact path="/artisans">
         <Artisans />
       </Route>
       <Route path="/contact">
@@ -40,7 +40,7 @@ const App = () => (
       <Route path="/account">
         <Account />
       </Route>
-      <Route path="/">
+      <Route exact path="/">
         <Home />
       </Route>
     </Switch>

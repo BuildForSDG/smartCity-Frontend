@@ -70,7 +70,7 @@ const ArtisanDetails = ({ getAnArtisan, artisan }) => {
                       )}
                     </Tab>
                     <Tab eventKey="write-review" title="Write">
-                      <ReviewFrom id={id} type="products" />
+                      <ReviewFrom id={id} type="artisans" />
                     </Tab>
                   </Tabs>
                 </Col>
