@@ -31,8 +31,8 @@ export const Product = ({ product }) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
-          <Button variant=" outlined primary">${price}</Button>
-          <CartBtn variant="primary">Add to cart</CartBtn>
+          <Button variant=" outlined primary" size='sm'>${price}</Button>
+          <CartBtn variant="primary" size='sm'>Add to cart</CartBtn>
         </Card.Body>
       </ProductCard>
     </div>

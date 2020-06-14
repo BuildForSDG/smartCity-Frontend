@@ -25,8 +25,8 @@ const Rdiv = styled.div`
   margin: 25px 0;
   border: 1px solid #f5f5f5;
   padding: 10px;
-  p{
-    color:grey;
+  p {
+    color: grey;
     margin: auto;
   }
 `;
@@ -62,7 +62,7 @@ const ArtisanDetails = ({ getAnArtisan, artisan }) => {
                           <Rdiv key={e._id}>
                             <span>{new Date(e.date).toDateString()}</span>
                             <div>{e.writer}</div>
-                             <p>{e.body}</p>
+                            <p>{e.body}</p>
                           </Rdiv>
                         ))
                       ) : (
@@ -75,10 +75,12 @@ const ArtisanDetails = ({ getAnArtisan, artisan }) => {
                   </Tabs>
                 </Col>
                 <Col sm={6} md={4}>
-                  <WishList variant="outline-info">Wishlist</WishList>
+                  <WishList variant="outline-info" size="sm">
+                    Wishlist
+                  </WishList>
                 </Col>
                 <Col sm={6} md={4}>
-                  <CartBtn>Add to cart</CartBtn>
+                  <CartBtn size="sm">Add to cart</CartBtn>
                 </Col>
               </Row>
             </Actions>
