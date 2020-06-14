@@ -3,7 +3,9 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button} from 'react-bootstrap';
+import {LoadingBtn} from './LoadingButton'
+import { ErrorAlert } from './alerts/errorAlert';
 import { saveReview } from '../store/actions/alerts/review.actions';
 
 const schema = yup.object({
@@ -20,7 +22,9 @@ const schema = yup.object({
   message: yup.string().min(30, "*message can't be shorter than 50 characters").required('*Last message is required')
 });
 
-function ReviewForm({ saveReview, id, type }) {
+function ReviewForm({ saveReview, id, type, alerts }) {
+  const { isSubmitting, error } = alerts.review;
+  const state = error ? <ErrorAlert /> : isSubmitting ? <LoadingBtn text='submitting...'/> : null
   return (
     <Formik
       validationSchema={schema}
@@ -31,7 +35,7 @@ function ReviewForm({ saveReview, id, type }) {
           review: {
             writer: `${value.firstName} ${value.lastName}`,
             body: value.message,
-            rating: parseFloat(Math.random().toFixed(1))+4
+            rating: parseFloat(Math.random().toFixed(1)) + 4
           }
         })
       }
@@ -82,7 +86,7 @@ function ReviewForm({ saveReview, id, type }) {
             <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>
           </Form.Group>
-          <Button type="submit">Submit review</Button>
+          {state || <Button type="submit" size='sm'>Submit review</Button>}
         </Form>
       )}
     </Formik>
@@ -92,10 +96,15 @@ function ReviewForm({ saveReview, id, type }) {
 ReviewForm.propTypes = {
   saveReview: PropTypes.func,
   id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  alerts: PropTypes.object
 };
-
+const mapStateToProps = ({ alerts }) => {
+  return {
+    alerts
+  };
+};
 const mapDispatchToProp = {
   saveReview
 };
-export default connect(null, mapDispatchToProp)(ReviewForm);
+export default connect(mapStateToProps, mapDispatchToProp)(ReviewForm);

@@ -40,7 +40,7 @@ export const Artisan = ({ artisan }) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
           <Button variant=" outlined primary">${price}</Button>
-          <CartBtn variant="primary">Hire now</CartBtn>
+          <CartBtn variant="primary" size='sm'>Hire now</CartBtn>
         </Card.Body>
       </ArtisanCard>
     </div>
