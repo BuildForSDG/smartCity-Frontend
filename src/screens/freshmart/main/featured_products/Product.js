@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import {CartBtn} from '../../../../components/CartBtn'
 import config from '../../../../config/system';
 
 const ProductCard = styled(Card)`
@@ -16,23 +18,16 @@ const ProductCard = styled(Card)`
     margin: 20px auto !important;
   }
 `;
-const CartBtn = styled(Button)`
-  color: #fff;
-  float: right;
-  background-color: rgba(4, 9, 110, 0.95);
-  transition: background 1s;
-  :hover {
-    background-color: #ffaf30;
-    color: rgba(4, 9, 110, 0.95);
-  }
-`;
+
 
 export const Product = ({ product }) => {
-  const { description, name, price, filename } = product;
+  const { description, name, price, filename, _id } = product;
   return (
     <div>
-      <ProductCard style={{ width: '17rem' /*,margin:'20px auto'*/ }}>
-        <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
+      <ProductCard style={{ maxWidth: '17rem'}}>
+        <Link to={`/freshmart/${_id}/details`}>
+          <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
+        </Link>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>

@@ -1,20 +1,26 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
+//import PropTypes from 'prop-types';
+//import { connect } from 'react-redux';
 import { AppBar } from './components/AppBar';
 import Footer from './components/footer';
+import ProductDetails from './components/ProductDetails';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fonts } from './utils/fonts'
+import { fonts } from './utils/fonts';
 import { Home, Artisans, FreshMart, ContactForm, Register, Account } from './screens';
 library.add(...fonts);
 
 const Div = styled.div`
-font-family: 'Montserrat', sans-serif;
-`
+  font-family: 'Montserrat', sans-serif;
+`;
 const App = () => (
   <Div>
     <AppBar />
     <Switch>
+      <Route path="/freshmart/:id/details">
+        <ProductDetails />
+      </Route>
       <Route path="/freshmart">
         <FreshMart />
       </Route>
