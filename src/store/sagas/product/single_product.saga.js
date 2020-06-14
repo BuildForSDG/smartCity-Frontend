@@ -9,7 +9,7 @@ import {
 
 export function* singleProductSaga(action) {
     try {
-        const data = yield call(productsService.getProductById, action.payload);
+        const data = yield call(productsService.getItemById, action.payload);
         yield put({
             type: GET_SINGLE_PRODUCT_SUCCESS,
             payload: data

@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns } from 'react-bootstrap';
 import { Product } from './Product';
-import { Loading} from '../../../../components/alerts/loading';
-import { ErrorAlert} from '../../../../components/alerts/errorAlert'
+import { Loading } from '../../../../components/alerts/loading';
+import { ErrorAlert } from '../../../../components/alerts/errorAlert';
 import { getAllProducts } from '../../../../store/actions';
 
 const Deck = styled(CardColumns)`
@@ -34,7 +34,7 @@ const FeaturedProducts = ({ getAllProducts, products }) => {
   console.log(2, products);
 
   let { data, error, isLoading } = products.all;
-  
+
   const state = error ? <ErrorAlert /> : isLoading ? <Loading /> : null;
   return (
     state || (
@@ -42,7 +42,7 @@ const FeaturedProducts = ({ getAllProducts, products }) => {
         <LightHeading className="py-2">Featured Products</LightHeading>
         <Deck>
           {data.map((item) => (
-            <Product key={item._id} product={item} />
+            <Product product={item} key={item._id} />
           ))}
         </Deck>
       </div>
