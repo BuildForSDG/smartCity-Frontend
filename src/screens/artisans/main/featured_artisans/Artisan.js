@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import config from '../../../../config/system';
@@ -28,11 +29,13 @@ const CartBtn = styled(Button)`
 `;
 
 export const Artisan = ({ artisan }) => {
-  const { description, name, price, filename } = artisan;
+  const { description, name, price, filename, _id } = artisan;
   return (
     <div>
       <ArtisanCard style={{ maxWidth: '17rem' /*,margin:'20px auto'*/ }}>
+        <Link to={`artisans/${_id}/details`}>
         <Card.Img variant="top" src={`${config.ArtisanImageUrl}/${filename}`} style={{ height: 150 }} />
+        </Link>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
