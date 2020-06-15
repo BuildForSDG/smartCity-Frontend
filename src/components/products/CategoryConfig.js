@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns, Button } from 'react-bootstrap';
-import { Product } from './Product';
+import Product from './Product';
 import { Loading } from '../alerts/loading';
 import { ErrorAlert } from '../alerts/errorAlert';
 import { getCategoryProducts } from '../../store/actions';

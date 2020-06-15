@@ -31,7 +31,7 @@ class productsService extends EventEmitter {
     });
   }
 
-  getItemsInCategory({ type, categoryId, limit, name }) {
+  getItemsInCategory({ type, categoryId, limit}) {
     return new Promise((resolve, reject) => {
       axios
         .get(systemConfig.serverBaseUrl + `/${type}/inCategory/${categoryId}`, {
@@ -40,7 +40,6 @@ class productsService extends EventEmitter {
           }
         })
         .then((response) => {
-          console.log({...response.data, name})
           resolve(response.data);
         })
         .catch((error) => {

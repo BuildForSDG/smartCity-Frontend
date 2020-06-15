@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns } from 'react-bootstrap';
-import { Product } from './Product';
+import Product from './Product';
 import { Loading } from '../../../../components/alerts/loading';
 import { ErrorAlert } from '../../../../components/alerts/errorAlert';
 import { getAllProducts } from '../../../../store/actions';
@@ -31,7 +31,7 @@ const FeaturedProducts = ({ getAllProducts, products }) => {
       limit: 12
     });
   }, []);
-  console.log(2, products);
+ 
 
   let { data, error, isLoading } = products.all;
 

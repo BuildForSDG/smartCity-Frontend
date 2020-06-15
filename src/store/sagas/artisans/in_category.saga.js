@@ -11,7 +11,6 @@ function* getCategoryArtisansSaga(action) {
     try {
         const data = yield call(productsService.getItemsInCategory, action.payload);
         const { name } = action.payload
-        console.log(name)
         yield put({
             type: GET_CATEGORY_ARTISANS_SUCCESS+name,
             payload: data
