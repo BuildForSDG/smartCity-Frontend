@@ -8,7 +8,6 @@ import config from '../config/system';
 import { getAnArtisan } from '../store/actions';
 import { Loading } from './alerts/loading';
 import { ErrorAlert } from './alerts/errorAlert';
-import { CartBtn } from './CartBtn';
 import ReviewFrom from './ReviewForm';
 
 const Details = styled(Container)`
@@ -30,6 +29,16 @@ const Rdiv = styled.div`
     margin: auto;
   }
 `;
+const CartBtn = styled(Button)`
+  color: #fff;
+  float: right;
+  background-color: rgba(4, 9, 110, 0.95);
+  transition: background 0.5s;
+  :hover {
+    background-color: #ffaf30;
+    color: rgba(4, 9, 110, 0.95);
+  }
+`;
 
 const ArtisanDetails = ({ getAnArtisan, artisan }) => {
   let { data, error, isLoading } = artisan.item;
@@ -40,8 +49,7 @@ const ArtisanDetails = ({ getAnArtisan, artisan }) => {
       id
     });
   }, []);
-  console.log(data);
-
+  
   const state = error ? <ErrorAlert /> : isLoading || !data.filename ? <Loading /> : null;
   return (
     state || (

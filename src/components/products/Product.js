@@ -1,7 +1,10 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import {saveCart} from '../../store/actions/alerts'
+import {CartBtn} from '../cart/CartBtn'
 import config from '../../config/system';
 
 const ProductCard = styled(Card)`
@@ -17,23 +20,15 @@ const ProductCard = styled(Card)`
     margin: 20px auto !important;
   }
 `;
-const CartBtn = styled(Button)`
-  color: #fff;
-  float: right;
-  background-color: rgba(4, 9, 110, 0.95);
-  transition: background 0.5s;
-  :hover {
-    background-color: #ffaf30;
-    color: rgba(4, 9, 110, 0.95);
-  }
-`;
 const Title = styled(Card.Title)`
 font-size: 0.8rem;
 `
 
 
-export const Product = ({ product }) => {
+const Product = ({ product, saveCart, alerts}) => {
   const { description, name, price, filename } = product;
+  let { data} = alerts.cart;
+  const handleClick = (e) => saveCart([...data, e])
   return (
     <div>
       <ProductCard style={{ maxWidth: '14rem' }}>
@@ -42,7 +37,7 @@ export const Product = ({ product }) => {
           <Title>{name}</Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
           <Button variant=" outlined primary" size='sm'>${price}</Button>
-          <CartBtn variant="primary" size='sm'>Add to cart</CartBtn>
+          <CartBtn variant="primary" size='sm' onClick={() => handleClick(product)} >Add to cart</CartBtn>
         </Card.Body>
       </ProductCard>
     </div>
@@ -50,5 +45,16 @@ export const Product = ({ product }) => {
 };
 
 Product.propTypes = {
-  product: PropTypes.object.isRequired
+  product: PropTypes.object.isRequired,
+  alerts: PropTypes.object,
+  saveCart: PropTypes.func
 };
+const mapStateToProps = ({ alerts }) => {
+  return {
+    alerts
+  };
+};
+const mapDispatchToProp = {
+  saveCart
+};
+export default connect(mapStateToProps, mapDispatchToProp)(Product);

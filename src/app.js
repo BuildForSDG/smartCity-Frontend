@@ -4,6 +4,7 @@ import styled from 'styled-components';
 //import PropTypes from 'prop-types';
 //import { connect } from 'react-redux';
 import { AppBar } from './components/AppBar';
+import Cart from './components/cart/Cart'
 import Footer from './components/footer';
 import ProductDetails from './components/ProductDetails';
 import ArtisanDetails from './components/ArtisanDetails'
@@ -18,6 +19,7 @@ const Div = styled.div`
 const App = () => (
   <Div>
     <AppBar />
+    <Cart />
     <Switch>
       <Route path="/freshmart/:id/details">
         <ProductDetails />
