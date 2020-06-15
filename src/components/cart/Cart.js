@@ -8,7 +8,7 @@ import { CartItem } from './CartItem';
 
 const Cart = ({ hideCart, alerts, saveCart }) => {
   let { data, open } = alerts.cart;
-  console.log(data);
+  
   const handleClose = () => hideCart();
   const cartItems = (() => {
     const counter = {};
@@ -18,7 +18,7 @@ const Cart = ({ hideCart, alerts, saveCart }) => {
     });
     return Object.entries(counter).map((e) => ({ item: JSON.parse(e[0]), count: e[1] }));
   })();
-  console.log('cart:', cartItems);
+
   const addOne = (item) => {
     saveCart([...data, item]);
   };
