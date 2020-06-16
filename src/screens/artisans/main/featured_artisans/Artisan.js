@@ -30,7 +30,7 @@ const CartBtn = styled(Button)`
 `;
 
 export const Artisan = ({ artisan }) => {
-  const { description, name, price, filename, _id } = artisan;
+  const { description, name, filename, _id } = artisan;
   return (
     <div>
       <ArtisanCard style={{ maxWidth: '17rem'}}>

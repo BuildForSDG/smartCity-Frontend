@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns } from 'react-bootstrap';
-import { Loading } from '../../../../components/alerts/loading'
-import { ErrorAlert } from '../../../../components/alerts/errorAlert'
+import { Loading } from '../../../../components/alerts/loading';
+import { ErrorAlert } from '../../../../components/alerts/errorAlert';
 import { Artisan } from './Artisan';
 import { getAllArtisans } from '../../../../store/actions';
 
