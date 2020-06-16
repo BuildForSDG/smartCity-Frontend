@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from '../../config/system';
 
@@ -33,16 +34,20 @@ const Title = styled(Card.Title)`
 `;
 
 export const Artisan = ({ artisan }) => {
-  const { description, name, filename } = artisan;
+  const { description, name, filename, _id } = artisan;
   return (
     <div>
       <ArtisanCard style={{ maxWidth: '14rem' }}>
+        <Link to={`artisans/${_id}/details`}>
         <Card.Img variant="top" src={`${config.ArtisanImageUrl}/${filename}`} style={{ height: 150 }} />
+        </Link>
         <Card.Body>
           <Title>{name}</Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
            <Button size='sm' variant='default'>
+           <Link to={`artisans/${_id}/details`}>
            <FontAwesomeIcon icon="eye"/>
+           </Link>
            </Button>
             <CartBtn variant="primary" size="sm">
               Hire now

@@ -3,6 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from '../../../../config/system';
 
 const ArtisanCard = styled(Card)`
@@ -39,7 +40,11 @@ export const Artisan = ({ artisan }) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
-          <Button variant=" outlined primary">${price}</Button>
+          <Button variant=" outlined primary">
+          <Link to={`artisans/${_id}/details`}>
+          <FontAwesomeIcon icon="eye"/>
+          </Link>
+          </Button>
           <CartBtn variant="primary" size='sm'>Hire now</CartBtn>
         </Card.Body>
       </ArtisanCard>

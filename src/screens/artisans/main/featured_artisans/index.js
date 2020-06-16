@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns } from 'react-bootstrap';
+import { Loading } from '../../../../components/alerts/loading'
+import { ErrorAlert } from '../../../../components/alerts/errorAlert'
 import { Artisan } from './Artisan';
 import { getAllArtisans } from '../../../../store/actions';
 
@@ -30,16 +32,20 @@ const FeaturedArtisans = ({ getAllArtisans, artisans }) => {
     });
   }, []);
 
-  const items = artisans.all.data;
+  let { data, error, isLoading } = artisans.all;
+
+  const state = error ? <ErrorAlert /> : isLoading ? <Loading /> : null;
   return (
+    state || (
     <div>
       <LightHeading className="py-2">Featured Artisans</LightHeading>
       <Deck>
-        {items.map((item) => (
+        {data.map((item) => (
           <Artisan key={item._id} artisan={item} />
         ))}
       </Deck>
     </div>
+    )
   );
 };
 
