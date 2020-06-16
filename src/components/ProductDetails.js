@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image, Button, Tabs, Tab } from 'react-bootstrap';
 import styled from 'styled-components';
 import config from '../config/system';
+import {CartBtn} from './cart/CartBtn'
 import { getSingleProduct } from '../store/actions';
 import { Loading } from './alerts/loading';
 import { ErrorAlert } from './alerts/errorAlert';
-import { CartBtn } from './CartBtn';
 import ReviewFrom from './ReviewForm';
 
 const Details = styled(Container)`
@@ -40,7 +40,6 @@ const ProductDetails = ({ getSingleProduct, product }) => {
       id
     });
   }, []);
-  console.log(data);
 
   const state = error ? <ErrorAlert /> : isLoading || !data.filename ? <Loading /> : null;
   return (
@@ -80,7 +79,7 @@ const ProductDetails = ({ getSingleProduct, product }) => {
                   </WishList>
                 </Col>
                 <Col sm={6} md={4}>
-                  <CartBtn size="sm">Add to cart</CartBtn>
+                  <CartBtn item={data}>Add to cart</CartBtn>
                 </Col>
               </Row>
             </Actions>
