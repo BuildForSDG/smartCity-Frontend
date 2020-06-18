@@ -1,10 +1,12 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from '../../config/system';
+import { saveHire } from '../../store/actions/alerts';
 
 const ArtisanCard = styled(Card)`
   border: none;
@@ -33,8 +35,10 @@ const Title = styled(Card.Title)`
   font-size: 0.8rem;
 `;
 
-export const Artisan = ({ artisan }) => {
+export const Artisan = ({ artisan, saveHire, alerts }) => {
   const { description, name, filename, _id } = artisan;
+  let { data } = alerts.hire;
+  const handleClickHire = (e) => saveHire([...data, e])
   return (
     <div>
       <ArtisanCard style={{ maxWidth: '14rem' }}>
@@ -49,7 +53,10 @@ export const Artisan = ({ artisan }) => {
            <FontAwesomeIcon icon="eye"/>
            </Link>
            </Button>
-            <CartBtn variant="primary" size="sm">
+            <CartBtn variant="primary" 
+              size="sm"
+              onClick={() => handleClickHire(artisan)}
+            >
               Hire now
             </CartBtn>
         </Card.Body>
@@ -59,5 +66,19 @@ export const Artisan = ({ artisan }) => {
 };
 
 Artisan.propTypes = {
-  artisan: PropTypes.object.isRequired
+  artisan: PropTypes.object.isRequired,
+  alerts: PropTypes.object,
+  saveHire: PropTypes.func
 };
+
+const mapStateToProps = ({ alerts }) => {
+  return {
+    alerts
+  }
+};
+
+const mapDispatchToProp = {
+  saveHire
+};
+
+export default connect(mapStateToProps, mapDispatchToProp)(Artisan);
