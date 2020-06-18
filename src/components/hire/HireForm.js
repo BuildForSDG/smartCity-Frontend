@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Col, Button } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
@@ -35,7 +35,7 @@ function HireForm() {
             values,
             touched,
             isValid,
-            errors,
+            errors
         }) => (
             <Form noValidate onSubmit={handleSumit}>
                 <Form.Row>
@@ -50,7 +50,7 @@ function HireForm() {
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="6" controlId="validateioFormik02">
-                  <form.Control
+                  <Form.Control
                     type="text"
                     name="lastName"
                     value={values.lastName}
@@ -118,3 +118,5 @@ function HireForm() {
         </Formik>
     )
 }
+
+export default HireForm;

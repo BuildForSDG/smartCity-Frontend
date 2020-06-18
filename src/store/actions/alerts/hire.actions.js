@@ -8,11 +8,11 @@ export function hideHire() {
     }
 }
 
-export const showHire = () => { type: SHOW_HIRE }
+export const showHire = () => ({ type: SHOW_HIRE })
 
-export function saveHire() {
+export function saveHire(options) {
     return {
         type: SAVE_HIRE,
         payload: options
     };
-}
+};
