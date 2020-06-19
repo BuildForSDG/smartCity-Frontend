@@ -1,2 +1,2 @@
 export * from './an_artisan.actions';
-export * from './artisan_detailS.actions';
+export * from './artisan_details.actions';
