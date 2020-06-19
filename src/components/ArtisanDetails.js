@@ -88,7 +88,7 @@ const ArtisanDetails = ({ getAnArtisan, artisan }) => {
                   </WishList>
                 </Col>
                 <Col sm={6} md={4}>
-                  <CartBtn size="sm">Add to cart</CartBtn>
+                  <CartBtn size="sm">Hire now</CartBtn>
                 </Col>
               </Row>
             </Actions>
