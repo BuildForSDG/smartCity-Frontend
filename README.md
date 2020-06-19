@@ -3,7 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/13b087a11c924da1bed71c536993fe0b)](https://app.codacy.com/gh/BuildForSDG/smartCity-Frontend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/smartCity-Frontend&utm_campaign=Badge_Grade_Dashboard)
 
 ## About SmartCity
-<https://smartcity-one.vercel.app/>
+<https://smartcity-hub.vercel.app/>
 
 SmartCity is a project that seeks to digitize buying and hiring process in a mordern society. 
 
