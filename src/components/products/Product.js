@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import {saveCart} from '../../store/actions/alerts'
 import {CartBtn} from '../cart/CartBtn'
 import config from '../../config/system';
+import {Link} from 'react-router-dom'
 
 const ProductCard = styled(Card)`
   border: none;
@@ -26,13 +27,15 @@ font-size: 0.8rem;
 
 
 const Product = ({ product, saveCart, alerts}) => {
-  const { description, name, price, filename } = product;
+  const { description, name, price, filename, _id } = product;
   let { data} = alerts.cart;
   const handleClick = (e) => saveCart([...data, e])
   return (
     <div>
       <ProductCard style={{ maxWidth: '14rem' }}>
-        <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
+        <Link to={`/freshmart/${_id}/details`}>
+          <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
+        </Link>
         <Card.Body>
           <Title>{name}</Title>
           <Card.Text>{description.slice(0, 50)}</Card.Text>
