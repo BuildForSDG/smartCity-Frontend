@@ -13,7 +13,7 @@
     "test": "__tests__"
   },
   "scripts": {
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build ./src/index.html -d public",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cover": "jest --coverage",
