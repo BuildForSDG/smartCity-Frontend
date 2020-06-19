@@ -4,6 +4,7 @@
 
 ## About SmartCity
 <https://smartcity.team-241.vercel.app/>
+
 <https://smartcity.vercel.app/>
 
 SmartCity is a project that seeks to digitize buying and hiring process in a mordern society. 
