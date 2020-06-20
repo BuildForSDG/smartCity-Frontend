@@ -85,6 +85,7 @@ Nkwuda Sunday Cletus
 Github: <https://github.com/sunny775>	  
 Twitter: <https://twitter.com/scletus40>	  
 Linkedin: <https://www.linkedin.com/sunday-nkwuda-04aa57a7/>
+Website: <https://sonnietech.com.ng/>
 
   ### Team members and roles played
 	
