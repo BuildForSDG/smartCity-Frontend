@@ -2306,11 +2306,6 @@ commander@^2.11.0, commander@^2.19.0, commander@^2.20.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-compiled-accessors@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/compiled-accessors/-/compiled-accessors-0.2.0.tgz#6c2efa8ba627e02d4460f1d88999f1b776b35da3"
-  integrity sha1-bC76i6Yn4C1EYPHYiZnxt3azXaM=
-
 component-emitter@^1.2.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
@@ -6951,13 +6946,6 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rrr@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/rrr/-/rrr-0.1.1.tgz#e620058f37538f42116cd85b990252cdef8bc632"
-  integrity sha1-5iAFjzdTj0IRbNhbmQJSze+LxjI=
-  dependencies:
-    compiled-accessors "^0.2.0"
-
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
@@ -7539,6 +7527,11 @@ strip-json-comments@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.0.tgz#7638d31422129ecf4457440009fba03f9f9ac180"
   integrity sha512-e6/d0eBu7gHtdCqFt0xJr642LdToM5/cN4Qb9DbHjVx1CP5RyeM+zH7pbecEmDv/lBqb0QH+6Uqq75rxFPkM0w==
+
+sty@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/sty/-/sty-0.6.1.tgz#de3fb9ae570bc60a7447245f0dec31213ea2d5a8"
+  integrity sha1-3j+5rlcLxgp0RyRfDewxIT6i1ag=
 
 style@^0.0.3:
   version "0.0.3"
