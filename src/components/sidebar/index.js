@@ -8,10 +8,13 @@ import CategoriesList from './categories'
 const Div = styled.div`
   margin: 0;
   background: rgba(255, 255, 255, 0.5);
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const SideBar = () => (
-  <Div className="col-sm-3">
+  <Div className="col-md-3 col-sm-12">
     <SearchBar />
     <IconCard />
     <CategoriesList />
