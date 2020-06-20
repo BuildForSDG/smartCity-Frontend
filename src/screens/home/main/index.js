@@ -29,7 +29,8 @@ const Design = ArtisanCategories(15, 'design', 3);
 const Tech = ArtisanCategories(16, 'tech', 3);
 
 const Main = () => (
-  <Section className="col-sm-9">
+  <div className="col-xs-12 col-md-9">
+  <Section>
     <Banner />
     <Promo />
     <Fruits />
@@ -49,5 +50,6 @@ const Main = () => (
     <Design />
     <Tech />
   </Section>
+  </div>
 );
 export default Main;

@@ -5,6 +5,10 @@
 ## About SmartCity
 <https://smartcity-hub.vercel.app/>
 
+
+<https://smartcity.sonnietech.com.ng/>
+
+
 SmartCity is a project that seeks to digitize buying and hiring process in a mordern society. 
 
 It is developed as a web application that contains the following main contents.  
@@ -83,6 +87,7 @@ Nkwuda Sunday Cletus
 Github: <https://github.com/sunny775>	  
 Twitter: <https://twitter.com/scletus40>	  
 Linkedin: <https://www.linkedin.com/sunday-nkwuda-04aa57a7/>
+Website: <https://sonnietech.com.ng/>
 
   ### Team members and roles played
 	
