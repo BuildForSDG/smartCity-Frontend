@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CardColumns, Button } from 'react-bootstrap';
-import { Artisan } from './Artisan';
+import Artisan from './Artisan';
 import { Loading } from '../alerts/loading';
 import { ErrorAlert } from '../alerts/errorAlert';
 import { getCategoryArtisans } from '../../store/actions';
