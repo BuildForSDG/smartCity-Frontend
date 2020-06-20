@@ -5,6 +5,7 @@ import styled from 'styled-components';
 //import { connect } from 'react-redux';
 import { AppBar } from './components/AppBar';
 import Cart from './components/cart/Cart'
+import HireForm from './components/hire/HireForm'
 import Footer from './components/footer';
 import ProductDetails from './components/ProductDetails';
 import ArtisanDetails from './components/ArtisanDetails'
@@ -20,6 +21,7 @@ const App = () => (
   <Div>
     <AppBar />
     <Cart />
+    <HireForm />
     <Switch>
       <Route path="/freshmart/:id/details">
         <ProductDetails />

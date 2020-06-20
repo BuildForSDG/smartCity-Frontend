@@ -2,7 +2,9 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { saveVendor } from '../../../../store/actions/alerts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from '../../../../config/system';
 
@@ -29,8 +31,10 @@ const CartBtn = styled(Button)`
   }
 `;
 
-export const Artisan = ({ artisan }) => {
+const Artisan = ({ artisan, saveVendor }) => {
   const { description, name, filename, _id } = artisan;
+
+  const handleClick = (e) => saveVendor(e);
   return (
     <div>
       <ArtisanCard style={{ maxWidth: '17rem'}}>
@@ -45,7 +49,7 @@ export const Artisan = ({ artisan }) => {
           <FontAwesomeIcon icon="eye"/>
           </Link>
           </Button>
-          <CartBtn variant="primary" size='sm'>Hire now</CartBtn>
+          <CartBtn variant="primary" size='sm' onClick={()=>handleClick(artisan)}>Hire now</CartBtn>
         </Card.Body>
       </ArtisanCard>
     </div>
@@ -53,5 +57,17 @@ export const Artisan = ({ artisan }) => {
 };
 
 Artisan.propTypes = {
-  artisan: PropTypes.object.isRequired
+  artisan: PropTypes.object.isRequired,
+  alerts: PropTypes.object,
+  saveVendor: PropTypes.func
 };
+
+const mapStateToProps = ({ alerts }) => {
+  return {
+    alerts
+  };
+};
+const mapDispatchToProp = {
+  saveVendor
+};
+export default connect(mapStateToProps, mapDispatchToProp)(Artisan);

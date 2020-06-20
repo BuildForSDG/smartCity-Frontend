@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { CardColumns } from 'react-bootstrap';
 import { Loading } from '../../../../components/alerts/loading';
 import { ErrorAlert } from '../../../../components/alerts/errorAlert';
-import { Artisan } from './Artisan';
+import Artisan from './Artisan';
 import { getAllArtisans } from '../../../../store/actions';
 
 const Deck = styled(CardColumns)`
