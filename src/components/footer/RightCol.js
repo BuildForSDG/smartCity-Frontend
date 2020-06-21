@@ -34,4 +34,4 @@ const SocialMedia = styled.div`
 const Icon = styled.div`
 display:flex;
 justify-content:space-between;
-`
+`;

@@ -8,6 +8,7 @@ import BottomRow from './BottomRow';
 import ReactWOW from 'react-wow';
 
 const Footer = () => (
+    <>
     <ReactWOW animation="zoomIn">
         <FooterWrapper>
         <Container>
@@ -26,6 +27,8 @@ const Footer = () => (
         </Container>
         </FooterWrapper>
     </ReactWOW>
+    <ScrollBtn  id="myBtn" title="Go to Top"> Top </ScrollBtn>
+    </>
 );
 
 export default Footer;
@@ -40,3 +43,23 @@ const FooterWrapper = styled.footer`
 export const styleLinks = {
     color: 'gold !important'
 }
+
+const ScrollBtn = styled.button`
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 9;
+    border: none;
+    outline: none;
+    background-color: rgba(4,9,110,0.95);
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    opacity: 0.5;
+
+    :hover {
+        opacity: 1;
+    }
+`;
