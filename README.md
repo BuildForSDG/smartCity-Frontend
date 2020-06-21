@@ -5,7 +5,9 @@
 ## About SmartCity
 <https://smartcity-hub.vercel.app/>
 
+
 <https://smartcity.sonnietech.com.ng/>
+
 
 SmartCity is a project that seeks to digitize buying and hiring process in a mordern society. 
 
