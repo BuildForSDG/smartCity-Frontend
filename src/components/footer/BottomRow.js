@@ -5,9 +5,9 @@ import styled from 'styled-components';
 const BottomRow = () => (
     <StyleBottomRow>
 
-        <p>&copy;2020 <span> <a style={{color: '#FFAF30'}} href="#">BuildForSDG</a>. All rights reserved. </span> </p>
+        <p>&copy;2020 <span> <a style={{color: '#FFAF30'}} href="https://github.com/BuildForSDG">BuildForSDG</a>. All rights reserved. </span> </p>
         
-        <p>Courtesy <span> <a style={{color: '#FFAF30'}} href="#">Team-241</a> </span></p>
+        <p>Courtesy <span> <a style={{color: '#FFAF30'}} href="https://github.com/BuildForSDG/smartCity-Frontend">Team-241</a> </span></p>
         
     </StyleBottomRow>
 )

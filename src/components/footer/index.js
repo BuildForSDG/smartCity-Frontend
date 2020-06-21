@@ -11,13 +11,13 @@ const Footer = () => (
         <FooterWrapper>
         <Container>
         <Row>
-            <Col>
+            <Col md="5">
                 <LeftColumn />
             </Col>
-            <Col>
+            <Col md="3">
                 <MiddleColumn />
             </Col>
-            <Col>
+            <Col md="4">
                 <RightColumn />
             </Col>
         </Row>
