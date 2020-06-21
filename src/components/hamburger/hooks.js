@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 
 export const useOnClickOutside = (ref, handler) => {
@@ -14,6 +14,6 @@ export const useOnClickOutside = (ref, handler) => {
             document.removeEventListener('mousedown', listener);
         };
     },
-    [ref, handler],
+    [ref, handler]
     );
 };
