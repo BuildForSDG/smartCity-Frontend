@@ -7,6 +7,7 @@ import { saveVendor } from '../../store/actions/alerts';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from '../../config/system';
+import ReactWOW from 'react-wow';
 
 const ArtisanCard = styled(Card)`
   border: none;
@@ -40,7 +41,7 @@ const Artisan = ({ artisan, saveVendor }) => {
 
   const handleClick = (e) => saveVendor(e);
   return (
-    <div>
+    <ReactWOW animation="zoomIn">
       <ArtisanCard style={{ maxWidth: '14rem' }}>
         <Link to={`artisans/${_id}/details`}>
           <Card.Img variant="top" src={`${config.ArtisanImageUrl}/${filename}`} style={{ height: 150 }} />
@@ -58,7 +59,7 @@ const Artisan = ({ artisan, saveVendor }) => {
           </CartBtn>
         </Card.Body>
       </ArtisanCard>
-    </div>
+    </ReactWOW>
   );
 };
 

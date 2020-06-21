@@ -5,9 +5,10 @@ import LeftColumn from './LeftCol';
 import MiddleColumn from './MiddleCol';
 import RightColumn from './RightCol';
 import BottomRow from './BottomRow';
+import ReactWOW from 'react-wow';
 
 const Footer = () => (
-    <>
+    <ReactWOW animation="zoomIn">
         <FooterWrapper>
         <Container>
         <Row>
@@ -24,7 +25,7 @@ const Footer = () => (
         <BottomRow />
         </Container>
         </FooterWrapper>
-    </>
+    </ReactWOW>
 );
 
 export default Footer;

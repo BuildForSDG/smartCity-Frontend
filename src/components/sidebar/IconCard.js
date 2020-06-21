@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import {Card} from './Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ReactWOW from 'react-wow';
 
 const Icon = styled.div`
 display:flex;
@@ -9,6 +10,7 @@ justify-content:space-between;
 padding:0 20px;
 `
 export const IconCard = ()=>(
+    <ReactWOW animation="zoomIn">
     <Card>
     <h5>Stay In Touch</h5>
     <Icon>
@@ -30,4 +32,5 @@ export const IconCard = ()=>(
     
     </Icon>
     </Card>
+    </ReactWOW>
 )
