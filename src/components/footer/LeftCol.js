@@ -5,10 +5,11 @@ const LeftColumn = () => (
     <Leftcolstyles>
         <h4>Contact Us</h4>
         <div>
-            <h5>Email us</h5>
+            <h6>Email</h6>
             <p>
                 <a style={{color: '#f7b731'}} href="mailto:buildforsdg@andela.com">buildforsdg@andela.com</a>
             </p>
+            <h6>Call:</h6>
             <p>
              <a style={{color: '#f7b731'}} href="tel:+2347012345678">+2347012345678</a>
             </p>

@@ -20,7 +20,7 @@ const Section = styled.section`
 `;*/
 
 const Main = () => (
-  <Section className="col-sm-9">
+  <Section className="col-md-9">
     <Banner />
     <FeaturedProducts />
   </Section>
