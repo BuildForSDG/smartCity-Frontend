@@ -2,6 +2,7 @@ import React from "react";
 import Form from "./form";
 import SideBar from "../../components/sidebar";
 import styled from "styled-components";
+import HamBurger from '../../components/hamburger';
 
 const Div = styled.div`
   background: #81c784;
@@ -26,11 +27,24 @@ const Section = styled.section`
   padding: 0;
   margin: 0;
 `;
+const HamBurgerMedia = styled(HamBurger)`
+    display: none;
+    @media (max-width: 769px) {
+        display: block;
+    }
+`;
 
+const SideBarNav = styled(SideBar)`
+display: block;
+@media (min-width: 578px) {
+    display: none;
+}
+`;
 
 const Register = () => (
   <Section className="row">
-    <SideBar />
+    <HamBurgerMedia />
+    <SideBarNav />
     <Div>
       <Form />
     </Div>
