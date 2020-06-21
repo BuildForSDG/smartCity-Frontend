@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import {saveCart} from '../../store/actions/alerts'
 import {CartBtn} from '../cart/CartBtn'
 import config from '../../config/system';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import ReactWOW from 'react-wow';
 
 const ProductCard = styled(Card)`
   border: none;
@@ -31,7 +32,7 @@ const Product = ({ product, saveCart, alerts}) => {
   let { data} = alerts.cart;
   const handleClick = (e) => saveCart([...data, e])
   return (
-    <div>
+    <ReactWOW animation="zoomIn">
       <ProductCard style={{ maxWidth: '14rem' }}>
         <Link to={`/freshmart/${_id}/details`}>
           <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
@@ -43,7 +44,7 @@ const Product = ({ product, saveCart, alerts}) => {
           <CartBtn variant="primary" size='sm' onClick={() => handleClick(product)} >Add to cart</CartBtn>
         </Card.Body>
       </ProductCard>
-    </div>
+    </ReactWOW>
   );
 };
 

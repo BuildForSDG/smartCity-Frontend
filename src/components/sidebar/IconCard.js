@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
-import {Card} from './Card'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {Card} from './Card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Icon = styled.div`
 display:flex;
