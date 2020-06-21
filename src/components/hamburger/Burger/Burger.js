@@ -5,14 +5,18 @@ import styled from 'styled-components';
 
 const Burger = ({ open, setOpen }) => {
     return (
-        <div style={{ position: 'relative'}}>
+        <BurgerDiv>
             <StyledBurger open={open} onClick={() => setOpen(!open)}>
+               {/*
+                 <div />
                 <div />
                 <div />
-                <div />
+             */}
+             Menu
             </StyledBurger>
-        </div>
-    )
+            <div className="ml-5 mb-0 p-3 pb-0">All Categories</div>
+        </BurgerDiv>
+    );
 }
 
 Burger.propTypes = {
@@ -22,12 +26,17 @@ Burger.propTypes = {
 
 export default Burger;
 
+const BurgerDiv = styled.div`
+    position: relative;
+    border-radius: none;
+`;
+
 const StyledBurger = styled.button`
   position: absolute;
-  top: 25px;
-  width: 2rem;
+  top: 8px;
+  width: 3rem;
   height: 2rem;
-  background: blue;
+  background: rgba(4, 9, 110, 0.95);
   color: #fff;
   border: none;
   padding: 0;

@@ -30,8 +30,8 @@ display: block;
 const Home = () => (
     <Section className="row">
         <HamBurgerMedia />
-        <SideBar />
-        <Main md="9" xs="12" />
+        <SideBarNav />
+        <Main />
     </Section>
 )
 export default Home;

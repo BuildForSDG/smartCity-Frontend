@@ -23,7 +23,8 @@ export default AppBurger;
 
 const BurgerWrapper = styled.div`
 display: none;
-  background: navyblue;
+width: 100%;
+// box-shadow: 0px 0px 19px 0px gold;
   @media(max-width: 768px) {
       display: block;
   }
