@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactWOW from 'react-wow';
 
 const MiddleColumn = () => (
-    <>
+    <ReactWOW animation="slideInDown">
         <h4>Quick Links</h4>
         <div>
         <p>
@@ -14,7 +15,7 @@ const MiddleColumn = () => (
         <a style={{color: '#f7b731'}} href="/artisans">Artisans</a>
         </p>
         </div>
-    </>
+    </ReactWOW>
 );
 
 export default MiddleColumn;

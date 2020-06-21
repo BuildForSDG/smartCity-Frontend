@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { saveVendor } from '../../../../store/actions/alerts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from '../../../../config/system';
+import ReactWOW from 'react-wow';
 
 const ArtisanCard = styled(Card)`
   border: none;
@@ -36,7 +37,7 @@ const Artisan = ({ artisan, saveVendor }) => {
 
   const handleClick = (e) => saveVendor(e);
   return (
-    <div>
+    <ReactWOW animation="swing">
       <ArtisanCard style={{ maxWidth: '17rem'}}>
        <Link to={`artisans/${_id}/details`}>
        <Card.Img variant="top" src={`${config.ArtisanImageUrl}/${filename}`} style={{ height: 150 }} />
@@ -52,7 +53,7 @@ const Artisan = ({ artisan, saveVendor }) => {
           <CartBtn variant="primary" size='sm' onClick={()=>handleClick(artisan)}>Hire now</CartBtn>
         </Card.Body>
       </ArtisanCard>
-    </div>
+    </ReactWOW>
   );
 };
 

@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {CartBtn} from '../../../../components/cart/CartBtn';
 import config from '../../../../config/system';
-import {saveCart} from '../../../../store/actions/alerts'
+import {saveCart} from '../../../../store/actions/alerts';
+import ReactWOW from 'react-wow';
 
 const ProductCard = styled(Card)`
   border: none;
@@ -26,7 +27,7 @@ const Product = ({ product, saveCart, alerts }) => {
   let { data} = alerts.cart;
   const handleClick = (e) => saveCart([...data, e])
   return (
-    <div>
+    <ReactWOW animation="flip">
       <ProductCard style={{ maxWidth: '17rem' }}>
         <Link to={`/freshmart/${_id}/details`}>
           <Card.Img variant="top" src={`${config.imageBaseUrl}/${filename}`} style={{ height: 150 }} />
@@ -40,7 +41,7 @@ const Product = ({ product, saveCart, alerts }) => {
           <CartBtn size='sm' onClick={() => handleClick(product)}>Add to cart</CartBtn>
         </Card.Body>
       </ProductCard>
-    </div>
+    </ReactWOW>
   );
 };
 
