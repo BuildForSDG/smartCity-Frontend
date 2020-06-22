@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactWOW from 'react-wow';
 
 const LeftColumn = () => (
+    <ReactWOW animation="fadeInUp">
     <Leftcolstyles>
         <h4>Contact Us</h4>
         <div>
@@ -15,6 +17,7 @@ const LeftColumn = () => (
             </p>
         </div>
     </Leftcolstyles>
+    </ReactWOW>
 )
 
 export default LeftColumn;

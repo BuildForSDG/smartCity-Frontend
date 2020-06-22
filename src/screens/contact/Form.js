@@ -3,13 +3,14 @@ import * as yup from 'yup';
 import { Formik } from 'formik';
 import { Form, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-
+import ReactWOW from 'react-wow';
 
 
 
 
 const FormDetails =  () => {
     return (
+      <ReactWOW animation="bounceIn">
       <ContactWrapper>
       <h3 className="text-center mb-5">Get In Touch</h3>
         <Formik
@@ -98,6 +99,7 @@ const FormDetails =  () => {
           )}
         </Formik>
       </ContactWrapper>
+      </ReactWOW>
     );
   };
 

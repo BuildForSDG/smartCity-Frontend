@@ -1,12 +1,15 @@
 import React from 'react';
 import FormDetails from './Form';
 import styled from 'styled-components';
+import ReactWOW from 'react-wow';
 
 const ContactForm = () => (
     <>
-    <DarkHeadings className="py-3 mb-4 mt-0">
-    <h1>Contact Us</h1>
-    </DarkHeadings>
+    <ReactWOW animation="zoomIn">
+      <DarkHeadings className="py-3 mb-4 mt-0">
+      <h1>Contact Us</h1>
+      </DarkHeadings>
+    </ReactWOW>
     <ContainerDiv>
         <FormDetails />
     </ContainerDiv>
