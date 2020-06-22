@@ -21,13 +21,13 @@ const Banner = () => (
   <ReactWOW animation="zoomIn">
     <Div>
       <div style={{ textAlign: 'center', background: 'rgba(0, 0, 0, 0.65)', height:'fit-content', padding: '50px 10px' }}>
-        <h2 style={{ fontWeight: 'bold'}}>All your snacks, cakes, vegetable and fruits vendors, now accessible online. We have equally got all your casual service providers now orderable online</h2>
         <h4>
-        Search through our store, select the fresh delivery/ lunch of your choice and have it delivered to your doorstep in hours. Book any service, from home carwash to pro web services online
-          <br />
+        Goal 9 ( the idea of a smartcity- where all kinds of perishables and all kinds of services can be ordered online and delivered to the clients door step).<b/>
+This will create jobs, and enhance agricultural productivity, by providing a large market for large outputs of perishable products. Also enhancing employment status by ensuring petty service providers get adequate patronage.
+
         </h4>
         <Button variant="primary" size="sm">
-          Explore our store
+          see our vendors
         </Button>
       </div>
     </Div>
