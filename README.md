@@ -91,7 +91,7 @@ Website: <https://sonnietech.com.ng/>
 
   ### Team members and roles played
 	
-Emouhwo Warri - Frontend Developement  
+Emuohwo Warri - Frontend Developement  
 Github:  <https://github.com/Emuohwo>	  
 Facebook:  <https://www.facebook.com/warriisaac.emuohwo> 
 Twitter: <https://mobile.twitter.com/wise_shore>  
