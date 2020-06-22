@@ -115,6 +115,7 @@ Facebook Developer Circles & Andela Team Members
 Every member of the #BuildForSDG Team:	  
 Joy Ejiofor
 Sam Esidem
+Charles Opute Odili
 
 **Thank You! for the opportunity and support all the way.**
 
