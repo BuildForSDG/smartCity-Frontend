@@ -47,7 +47,7 @@ export const styleLinks = {
 const ScrollBtn = styled.button`
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 110px;
     right: 30px;
     z-index: 9;
     border: none;
