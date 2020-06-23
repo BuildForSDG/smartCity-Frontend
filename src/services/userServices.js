@@ -14,38 +14,32 @@ class userService extends EventEmitter {
     axios.defaults.headers.common['Accept'] = 'application/json';
   }
 
-  postUser({type, user}) {
-    return () => {
-        return new Promise((resolve, reject) => {
-          axios
-            .post(systemConfig.userBaseUrl + `/${type}`, {
-              ...user
-            })
-            .then((response) => {
-              resolve(response.data);
-            })
-            .catch((error) => {
-              reject(error.response.data);
-            });
+  postUser({ type, user }) {
+    return new Promise((resolve, reject) => {
+      axios
+        .post(systemConfig.userBaseUrl + `/${type}`, {
+          ...user
+        })
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error.response.data);
         });
-      }
+    });
   }
 
-
-  getUser({type}) {
-    const url = type ? systemConfig.userBaseUrl + `/${type}` : systemConfig.userBaseUrl
-    return () => {
-        return new Promise((resolve, reject) => {
-          axios
-            .get(url)
-            .then((response) => {
-              resolve(response.data);
-            })
-            .catch((error) => {
-              reject(error.response.data);
-            });
+  getUser(url) {
+    return new Promise((resolve, reject) => {
+      axios
+        .get(url)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error.response.data);
         });
-      }
+    });
   }
 
   /* login(user) {
@@ -62,7 +56,6 @@ class userService extends EventEmitter {
         });
     });
   } */
-
 }
 
 const instance = new userService();

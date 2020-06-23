@@ -5,7 +5,6 @@ import { PreviousButton } from "./navbuttons/PreviousButton";
 import { NextButton } from "./navbuttons/NextButton";
 
 export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
-  console.dir(formik);
   if (step !== 4) return null;
   const { getFieldProps, touched, errors, setFieldValue, values } = formik;
   return (

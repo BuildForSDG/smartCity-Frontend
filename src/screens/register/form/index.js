@@ -6,6 +6,7 @@ import { EmailAndPhone } from "./EmailAndPhone";
 import { Name } from "./Name";
 import { Address } from "./Address";
 import { StateCityGenderBirth } from "./StateCity";
+import {UsernameAndPassword} from './UsernameAndPass'
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const schema = yup.object({
@@ -44,7 +45,15 @@ const schema = yup.object({
     .max(30, "*State can't be longer than 30 characters")
     .required("*State is required"),
   gender: yup.string().required("*Select gender"),
-  dob: yup.string().required("*Select date of birth")
+  dob: yup.string().required("*Select date of birth"),
+  username: yup
+    .string()
+    .min(5, "*Username is too short")
+    .required("*Username is required"),
+  password: yup
+    .string()
+    .min(8, "*Password is too short")
+    .required("*Password is required")
   /*terms: yup.bool().required(),*/
 });
 
@@ -61,8 +70,8 @@ function RegisterationForm() {
       validationSchema={schema}
       onSubmit={(value) => console.log(value)}
       initialValues={{
-        firstName: "",
-        lastName: "",
+        firstname: "",
+        lastname: "",
         email: "",
         phone: "",
         address1: "",
@@ -70,7 +79,9 @@ function RegisterationForm() {
         city: "",
         state: "",
         gender: "",
-        dob: ""
+        dob: "",
+        username: '',
+        password: ''
       }}
     >
       {(formik) => (
@@ -89,6 +100,12 @@ function RegisterationForm() {
             previous={previous}
           />
           <StateCityGenderBirth
+            formik={formik}
+            step={step}
+            next={next}
+            previous={previous}
+          />
+           <UsernameAndPassword
             formik={formik}
             step={step}
             next={next}
