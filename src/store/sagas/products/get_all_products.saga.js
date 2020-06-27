@@ -23,6 +23,6 @@ function* getAllProductsSaga(action) {
 }
 
 
-export function* getAllProductsWatcher() {
-    yield takeLatest(GET_ALL_PRODUCTS, getAllProductsSaga);
+export function* getAllProductsWatcher(){
+    yield takeLatest( GET_ALL_PRODUCTS, getAllProductsSaga);
 }

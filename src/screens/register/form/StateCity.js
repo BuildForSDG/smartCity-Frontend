@@ -5,8 +5,7 @@ import { PreviousButton } from "./navbuttons/PreviousButton";
 import { NextButton } from "./navbuttons/NextButton";
 
 export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
-  console.dir(formik);
-  if (step !== 4) return null;
+  if (step !== 3) return null;
   const { getFieldProps, touched, errors, setFieldValue, values } = formik;
   return (
     <>
@@ -21,9 +20,6 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
             isValid={touched.city && !errors.city}
             isInvalid={touched.city && !!errors.city}
           />
-          <Form.Control.Feedback type="valid">
-            Looks good!
-          </Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
             {errors.city}
           </Form.Control.Feedback>
@@ -38,9 +34,6 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
             isValid={touched.state && !errors.state}
             isInvalid={touched.state && !!errors.state}
           />
-          <Form.Control.Feedback type="valid">
-            Looks good!
-          </Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
             {errors.state}
           </Form.Control.Feedback>
@@ -95,9 +88,6 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
             isValid={touched.dob && !errors.dob}
             isInvalid={touched.dob && !!errors.dob}
           />
-          <Form.Control.Feedback type="valid">
-            Looks good!
-          </Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
             {errors.dob}
           </Form.Control.Feedback>
@@ -108,7 +98,7 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
       <NextButton
         step={step}
         next={next}
-        disabled={!!errors.city || !!errors.state || errors.gender}
+        disabled={!!errors.city || !!errors.state || !!errors.gender}
       />
     </>
   );

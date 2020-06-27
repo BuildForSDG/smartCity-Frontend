@@ -5,7 +5,7 @@ import { PreviousButton } from "./navbuttons/PreviousButton";
 import { NextButton } from "./navbuttons/NextButton";
 
 export const Name = ({ step, formik, next, previous }) => {
-  if (step !== 1) return null;
+  if (step !== 0) return null;
   const { getFieldProps, touched, errors } = formik;
 
   return (
@@ -14,37 +14,35 @@ export const Name = ({ step, formik, next, previous }) => {
         <Form.Label>First Name</Form.Label>
         <Form.Control
           type="text"
-          name="firstName"
+          name="firstname"
           placeholder='First Name'
-          {...getFieldProps("firstName")}
-          isValid={touched.firstName && !errors.firstName}
-          isInvalid={touched.firstName && !!errors.firstName}
+          {...getFieldProps("firstname")}
+          isValid={touched.firstname && !errors.firstname}
+          isInvalid={touched.firstname && !!errors.firstname}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
-          {errors.firstName}
+          {errors.firstname}
         </Form.Control.Feedback>
       </Form.Group>
       <Form.Group md="4" controlId="Formik02">
         <Form.Label>Last Name</Form.Label>
         <Form.Control
           type="text"
-          name="lastName"
+          name="lastname"
           placeholder='Last Name'
-          {...getFieldProps("lastName")}
-          isValid={touched.lastName && !errors.lastName}
-          isInvalid={touched.lastName && !!errors.lastName}
+          {...getFieldProps("lastname")}
+          isValid={touched.lastname && !errors.lastname}
+          isInvalid={touched.lastname && !!errors.lastname}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
-          {errors.lastName}
+          {errors.lastname}
         </Form.Control.Feedback>
       </Form.Group>
       <PreviousButton step={step} previous={previous} />
       <NextButton
         step={step}
         next={next}
-        disabled={!!errors.firstName || !!errors.lastName}
+        disabled={!!errors.firstname || !!errors.lastname}
       />
     </>
   );
