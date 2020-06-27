@@ -66,9 +66,7 @@ const schema = yup.object({
 
 function RegisterationForm({postUsers, users}) {
   const [step, setStep] = React.useState(0);
-  React.useEffect(() => {
-    console.log(step);
-  });
+
   const next = () => setStep(step >= 3 ? 4 : step + 1);
   const previous = () => setStep(step <= 0 ? 0 : step - 1);
 

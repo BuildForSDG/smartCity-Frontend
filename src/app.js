@@ -8,7 +8,8 @@ import Cart from './components/cart/Cart'
 import HireForm from './components/hire/HireForm'
 import Footer from './components/footer';
 import ProductDetails from './components/ProductDetails';
-import ArtisanDetails from './components/ArtisanDetails'
+import ArtisanDetails from './components/ArtisanDetails';
+import RegisterRoute from './components/RegisterRoute';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fonts } from './utils/fonts';
 import { Home, Artisans, FreshMart, ContactForm, Register, Account } from './screens';
@@ -38,9 +39,9 @@ const App = () => (
       <Route path="/contact">
         <ContactForm />
       </Route>
-      <Route path="/register">
+      <RegisterRoute path="/register">
         <Register />
-      </Route>
+      </RegisterRoute>
       <Route path="/account">
         <Account />
       </Route>

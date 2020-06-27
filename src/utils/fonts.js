@@ -7,7 +7,9 @@ import {
   faPiggyBank,
   faMoneyBillAlt,
   faHeadset,
-  faEye
+  faEye,
+  faEdit,
+  faCamera
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fonts = [
@@ -19,5 +21,7 @@ export const fonts = [
   faPiggyBank,
   faMoneyBillAlt,
   faHeadset,
-  faEye
+  faEye,
+  faEdit,
+  faCamera
 ];
