@@ -4,7 +4,7 @@ import product from './product';
 import artisans from './artisans';
 import artisan from './artisan';
 import alerts from './alerts';
-import user from './user';
+import users from './users';
 
 const createReducer = (asyncReducers) =>
   combineReducers({
@@ -13,7 +13,7 @@ const createReducer = (asyncReducers) =>
     products,
     product,
     alerts,
-    user,
+    users,
     ...asyncReducers
   });
 

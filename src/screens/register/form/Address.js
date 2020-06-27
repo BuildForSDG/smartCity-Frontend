@@ -5,7 +5,7 @@ import { PreviousButton } from "./navbuttons/PreviousButton"
 import { NextButton } from "./navbuttons/NextButton"
 
 export const Address = ({ step, formik, next, previous }) => {
-  if (step !== 3) return null;
+  if (step !== 2) return null;
   const { getFieldProps, touched, errors } = formik;
   return (
     <>
@@ -19,7 +19,6 @@ export const Address = ({ step, formik, next, previous }) => {
           isValid={touched.address1 && !errors.address1}
           isInvalid={touched.address1 && !!errors.address1}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.address1}
         </Form.Control.Feedback>

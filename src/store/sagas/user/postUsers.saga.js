@@ -12,18 +12,18 @@ function* postUserSaga(action) {
     try {
         const data = yield call(userService.postUser, {type, user});
         yield put({
-            type: POST_USERS_SUCCESS+type,
+            type: POST_USERS_SUCCESS,
             payload: data
         });
 
     } catch (error) {
         yield put({
-            type: POST_USERS_ERROR + type, payload: error
+            type: POST_USERS_ERROR, payload: error
         });
     }
 }
 
 
-export function* postUserWatcher(type) {
-    yield takeLatest(POST_USERS + type, postUserSaga);
+export function* postUserWatcher() {
+    yield takeLatest(POST_USERS, postUserSaga);
 }

@@ -14,18 +14,18 @@ function* getUserSaga(action) {
     try {
         const data = yield call(user.getUser, url);
         yield put({
-            type: GET_USERS_SUCCESS+type,
+            type: GET_USERS_SUCCESS,
             payload: data
         });
 
     } catch (error) {
         yield put({
-            type: GET_USERS_ERROR + type, payload: error
+            type: GET_USERS_ERROR, payload: error
         });
     }
 }
 
 
-export function* getUserWatcher(type) {
-    yield takeLatest(GET_USERS + type, getUserSaga);
+export function* getUserWatcher() {
+    yield takeLatest(GET_USERS, getUserSaga);
 }

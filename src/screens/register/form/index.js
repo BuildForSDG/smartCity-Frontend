@@ -1,21 +1,28 @@
 import React from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
-import { Form } from "react-bootstrap";
+import { Form, ProgressBar } from "react-bootstrap";
+import styled from 'styled-components'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import {postUsers} from '../../../store/actions/user'
 import { EmailAndPhone } from "./EmailAndPhone";
 import { Name } from "./Name";
 import { Address } from "./Address";
 import { StateCityGenderBirth } from "./StateCity";
 import {UsernameAndPassword} from './UsernameAndPass'
+const Div = styled.div`
+padding: 20px 0;
+`
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const schema = yup.object({
-  firstName: yup
+  firstname: yup
     .string()
     .min(2, "*Name too short")
     .max(50, "*Name can't be longer than 50 characters")
     .required("*First Name is required"),
-  lastName: yup
+  lastname: yup
     .string()
     .min(2, "*Name is too short")
     .max(50, "*Name can't be longer than 50 characters")
@@ -57,18 +64,18 @@ const schema = yup.object({
   /*terms: yup.bool().required(),*/
 });
 
-function RegisterationForm() {
-  const [step, setStep] = React.useState(1);
+function RegisterationForm({postUsers, users}) {
+  const [step, setStep] = React.useState(0);
   React.useEffect(() => {
     console.log(step);
   });
-  const next = () => setStep(step >= 4 ? 5 : step + 1);
-  const previous = () => setStep(step <= 1 ? 1 : step - 1);
+  const next = () => setStep(step >= 3 ? 4 : step + 1);
+  const previous = () => setStep(step <= 0 ? 0 : step - 1);
 
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={(value) => console.log(value)}
+      onSubmit={(value) => postUsers({type: 'register', user: value})}
       initialValues={{
         firstname: "",
         lastname: "",
@@ -86,6 +93,9 @@ function RegisterationForm() {
     >
       {(formik) => (
         <Form noValidate onSubmit={formik.handleSubmit}>
+          <Div>
+          <ProgressBar now={step*25} label={`${step*100/4}%`} />
+          </Div>
           <Name formik={formik} step={step} next={next} previous={previous} />
           <EmailAndPhone
             formik={formik}
@@ -110,10 +120,23 @@ function RegisterationForm() {
             step={step}
             next={next}
             previous={previous}
+            isLoading = {users.user.isLoading}
           />
         </Form>
       )}
     </Formik>
   );
 }
-export default RegisterationForm;
+RegisterationForm.propTypes = {
+  users: PropTypes.object,
+  postUsers: PropTypes.func
+};
+const mapStateToProps = ({users }) => {
+  return {
+    users
+  };
+};
+const mapDispatchToProp = {
+  postUsers
+};
+export default connect(mapStateToProps, mapDispatchToProp)(RegisterationForm);

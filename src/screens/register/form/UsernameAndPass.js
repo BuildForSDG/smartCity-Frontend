@@ -1,11 +1,11 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form} from "react-bootstrap";
 import PropTypes from 'prop-types'
 import { PreviousButton } from "./navbuttons/PreviousButton";
 import { NextButton } from "./navbuttons/NextButton";
 
-export const UsernameAndPassword = ({  step, formik, next, previous }) => {
-  if (step !== 5) return null;
+export const UsernameAndPassword = ({  step, formik, next, previous, isLoading}) => {
+  if (step !== 4) return null;
   const { getFieldProps, touched, errors } = formik;
   return (
     <>
@@ -42,6 +42,7 @@ export const UsernameAndPassword = ({  step, formik, next, previous }) => {
         step={step}
         next={next}
         disabled={!!errors.city || !!errors.state || errors.gender}
+        isLoading = {isLoading}
       />
     </>
   );
@@ -50,5 +51,6 @@ UsernameAndPassword.propTypes = {
   step: PropTypes.number,
   next: PropTypes.func,
   previous: PropTypes.func,
-  formik: PropTypes.object
+  formik: PropTypes.object,
+  isLoading: PropTypes.bool
 };

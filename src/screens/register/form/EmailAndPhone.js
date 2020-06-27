@@ -5,7 +5,7 @@ import {PreviousButton} from './navbuttons/PreviousButton';
 import {NextButton} from './navbuttons/NextButton';
 
 export const EmailAndPhone = ({ step, formik, next, previous }) => {
-  if (step !== 2) return null;
+  if (step !== 1) return null;
   const { getFieldProps, touched, errors } = formik;
   return (
     <>
@@ -19,7 +19,6 @@ export const EmailAndPhone = ({ step, formik, next, previous }) => {
           isValid={touched.email && !errors.email}
           isInvalid={touched.email && !!errors.email}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.email}
         </Form.Control.Feedback>
@@ -34,7 +33,6 @@ export const EmailAndPhone = ({ step, formik, next, previous }) => {
           isValid={touched.phone && !errors.phone}
           isInvalid={touched.phone && !!errors.phone}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.phone}
         </Form.Control.Feedback>
